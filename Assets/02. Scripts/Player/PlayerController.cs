@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
     
     public float jumpForce = 10f; // 점프 힘
-    // private bool isJumping = false;
+    private bool isJumping = false;
 
     void Start()
     {
@@ -28,8 +28,8 @@ public class PlayerController : MonoBehaviour
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         
         // 점프 입력 감지
-        // if (Input.GetKeyDown(KeyCode.LeftAlt) && !isJumping)
-        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        if (Input.GetKeyDown(KeyCode.LeftAlt) && !isJumping)
+        // if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             // isJumping = true;
             Jump();
@@ -88,7 +88,6 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsWalking", isWalking);
     }
     
-    /*
     // 바닥에 닿았을 때 점프 가능 상태로 변경
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -97,5 +96,4 @@ public class PlayerController : MonoBehaviour
             isJumping = false;
         }
     }
-    */
 }
