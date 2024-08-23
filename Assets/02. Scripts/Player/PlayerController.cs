@@ -5,19 +5,28 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f; // 이동 속도
-    private Rigidbody2D rb;
     private float moveHorizontal;
+    
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    private bool isFacingRight = true;
 
     void Start()
     {
-        // Rigidbody2D 컴포넌트 가져오기
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         // 입력 감지
         moveHorizontal = Input.GetAxisRaw("Horizontal");
+        
+        // 방향 전환 체크
+        if (moveHorizontal != 0)
+        {
+            CheckFlip(moveHorizontal > 0);
+        }
     }
     
     // 물리 기반 이동
@@ -33,5 +42,21 @@ public class PlayerController : MonoBehaviour
 
         // Rigidbody2D의 속도 설정
         rb.velocity = movement;
+    }
+    
+    void CheckFlip(bool isMovingRight)
+    {
+        // 현재 방향과 이동 방향이 다르면 뒤집기
+        if (isMovingRight != isFacingRight)
+        {
+            Flip();
+        }
+    }
+    
+    // 캐릭터 보는 방향 뒤집기
+    void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 }
