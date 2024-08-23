@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public PlayerStats stats;
+    
     private Rigidbody2D rb;
-    public float moveSpeed = 2f; // 이동 속도
+    // public float moveSpeed = 2f; // 이동 속도
     private float moveHorizontal;
     
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private bool isFacingRight = true;
     
-    public float jumpForce = 10f; // 점프 힘
+    // public float jumpForce = 10f; // 점프 힘
     private bool isJumping = false;
 
     void Start()
@@ -54,7 +56,8 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         // 이동 벡터 계산
-        Vector2 movement = new Vector2(moveHorizontal * moveSpeed, rb.velocity.y);
+        // Vector2 movement = new Vector2(moveHorizontal * moveSpeed, rb.velocity.y);
+        Vector2 movement = new Vector2(moveHorizontal * stats.moveSpeed, rb.velocity.y);
 
         // Rigidbody2D의 속도 설정
         rb.velocity = movement;
@@ -62,7 +65,8 @@ public class PlayerController : MonoBehaviour
     
     void Jump()
     {
-        rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+        // rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(0f, stats.jumpForce), ForceMode2D.Impulse);
     }
     
     void CheckFlip(bool isMovingRight)

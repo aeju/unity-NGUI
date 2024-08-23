@@ -541,6 +541,7 @@ GameObject:
   - component: {fileID: 283635598}
   - component: {fileID: 283635599}
   - component: {fileID: 283635600}
+  - component: {fileID: 283635601}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -675,8 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886e94c8c04c045b29b16cf112a16dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  jumpForce: 4
+  stats: {fileID: 283635601}
 --- !u!70 &283635600
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -712,6 +712,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.43, y: 0.68}
   m_Direction: 0
+--- !u!114 &283635601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283635594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e236fbddb6d58477bb8390a6d0b09a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 300
+  currentHealth: 0
+  maxMana: 100
+  attack: 10
+  defense: 5
+  moveSpeed: 2
+  jumpForce: 4
 --- !u!1 &303445226
 GameObject:
   m_ObjectHideFlags: 0
