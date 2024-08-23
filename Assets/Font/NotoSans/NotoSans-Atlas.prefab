@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9058083979482991428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4018439639151700676}
+  - component: {fileID: 8875970314039266201}
+  m_Layer: 0
+  m_Name: NotoSans-Atlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4018439639151700676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9058083979482991428}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8875970314039266201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9058083979482991428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 0e0b86618c6494e908de33e2c7b241eb, type: 2}
+  sprites:
+  - name: nanumgothic32_00
+    outer:
+      serializedVersion: 2
+      x: 1509
+      y: 1793
+      width: 255
+      height: 255
+    inner:
+      serializedVersion: 2
+      x: 1509
+      y: 1793
+      width: 255
+      height: 255
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0.003921569
+    paddingTop: 0
+    paddingBottom: 0.003921569
+  - name: NotoSans
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 541
+      width: 1507
+      height: 1507
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 541
+      width: 1507
+      height: 1507
+    rotated: 0
+    paddingLeft: 0.00066357
+    paddingRight: 0.00066357
+    paddingTop: 0.00066357
+    paddingBottom: 0.00066357
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
