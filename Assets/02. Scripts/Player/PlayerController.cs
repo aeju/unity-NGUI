@@ -7,14 +7,12 @@ public class PlayerController : MonoBehaviour
     public PlayerStats stats;
     
     private Rigidbody2D rb;
-    // public float moveSpeed = 2f; // 이동 속도
-    private float moveHorizontal;
-    
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-    private bool isFacingRight = true;
     
-    // public float jumpForce = 10f; // 점프 힘
+    private float moveHorizontal;
+    
+    private bool isFacingRight = true;
     private bool isJumping = false;
 
     void Start()
@@ -31,9 +29,8 @@ public class PlayerController : MonoBehaviour
         
         // 점프 입력 감지
         if (Input.GetKeyDown(KeyCode.LeftAlt) && !isJumping)
-        // if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
-            // isJumping = true;
+            isJumping = true;
             Jump();
         }
         
@@ -56,7 +53,6 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         // 이동 벡터 계산
-        // Vector2 movement = new Vector2(moveHorizontal * moveSpeed, rb.velocity.y);
         Vector2 movement = new Vector2(moveHorizontal * stats.moveSpeed, rb.velocity.y);
 
         // Rigidbody2D의 속도 설정
@@ -65,7 +61,6 @@ public class PlayerController : MonoBehaviour
     
     void Jump()
     {
-        // rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
         rb.AddForce(new Vector2(0f, stats.jumpForce), ForceMode2D.Impulse);
     }
     

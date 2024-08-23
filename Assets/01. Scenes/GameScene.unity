@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 283635599}
   - component: {fileID: 283635600}
   - component: {fileID: 283635601}
+  - component: {fileID: 283635602}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -725,12 +726,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 300
-  currentHealth: 0
+  currentHealth: 100
   maxMana: 100
+  currentMana: 10
   attack: 10
   defense: 5
   moveSpeed: 2
   jumpForce: 4
+  level: 0
+  exp: 0
+--- !u!114 &283635602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283635594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ce192b97fab4b9bb6ba355c2b9930b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 283635601}
+  hpSlider: {fileID: 1634584826}
+  currentHpLabel: {fileID: 522093687}
+  mpSlider: {fileID: 1423899769}
+  currentMpLabel: {fileID: 1139665849}
 --- !u!1 &303445226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1051,7 @@ GameObject:
   - component: {fileID: 617518274}
   - component: {fileID: 617518275}
   m_Layer: 8
-  m_Name: Level (1)
+  m_Name: NickName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1045,7 +1066,7 @@ Transform:
   m_GameObject: {fileID: 617518273}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 178, y: -11, z: 0}
+  m_LocalPosition: {x: 122.97, y: -11, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1063,11 +1084,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 1, b: 0, a: 1}
-  mPivot: 4
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 3
   mDepth: 4
   mFont: {fileID: 3936954928667575084, guid: f5577163386ef44d69e6445630f7d42c, type: 3}
-  mText: NGUI
+  mText: "\uCD5C\uC560\uC8FC"
   mMaxLineWidth: 0
   mMaxLineHeight: 0
   mEncoding: 1
@@ -1881,7 +1902,7 @@ GameObject:
   - component: {fileID: 1050037205}
   m_Layer: 3
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2250,7 +2271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 0.05098039, g: 0.39145327, b: 1, a: 1}
+  mColor: {r: 0.39337844, g: 0.74948704, b: 0.9811321, a: 1}
   mPivot: 3
   mDepth: 6
   mAtlas: {fileID: 8005909330716535128, guid: 8d5dc7ec967e343b88004b0a4cb5b447, type: 3}
