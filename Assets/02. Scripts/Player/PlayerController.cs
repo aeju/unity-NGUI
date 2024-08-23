@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private Rigidbody2D rb;
     public float moveSpeed = 5f; // 이동 속도
     private float moveHorizontal;
     
-    private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
     private bool isFacingRight = true;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -27,6 +29,9 @@ public class PlayerController : MonoBehaviour
         {
             CheckFlip(moveHorizontal > 0);
         }
+        
+        // 애니메이션 상태 업데이트
+        UpdateAnimationState();
     }
     
     // 물리 기반 이동
@@ -58,5 +63,12 @@ public class PlayerController : MonoBehaviour
     {
         isFacingRight = !isFacingRight;
         spriteRenderer.flipX = !spriteRenderer.flipX;
+    }
+    
+    void UpdateAnimationState()
+    {
+        // 이동 중이면 walk 애니메이션, 그렇지 않으면 idle 애니메이션
+        bool isWalking = Mathf.Abs(moveHorizontal) > 0.1f;
+        animator.SetBool("IsWalking", isWalking);
     }
 }
