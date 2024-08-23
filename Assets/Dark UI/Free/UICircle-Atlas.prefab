@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2416101446291592217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3491802977537370365}
+  - component: {fileID: 4450034518820573885}
+  m_Layer: 0
+  m_Name: UICircle-Atlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3491802977537370365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2416101446291592217}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4450034518820573885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2416101446291592217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: f5137fe58f24c4f03864d70671307e65, type: 2}
+  sprites:
+  - name: CIRCLE2PXMED
+    outer:
+      serializedVersion: 2
+      x: 578
+      y: 962
+      width: 152
+      height: 153
+    inner:
+      serializedVersion: 2
+      x: 578
+      y: 962
+      width: 152
+      height: 153
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: CIRCLE4PXMED
+    outer:
+      serializedVersion: 2
+      x: 418
+      y: 960
+      width: 154
+      height: 155
+    inner:
+      serializedVersion: 2
+      x: 418
+      y: 960
+      width: 154
+      height: 155
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: CIRCLE2PXLAR
+    outer:
+      serializedVersion: 2
+      x: 210
+      y: 912
+      width: 202
+      height: 203
+    inner:
+      serializedVersion: 2
+      x: 210
+      y: 912
+      width: 202
+      height: 203
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: CIRCLE4PXSMA
+    outer:
+      serializedVersion: 2
+      x: 736
+      y: 982
+      width: 132
+      height: 133
+    inner:
+      serializedVersion: 2
+      x: 736
+      y: 982
+      width: 132
+      height: 133
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: CIRCLE2PXSMALL
+    outer:
+      serializedVersion: 2
+      x: 874
+      y: 984
+      width: 130
+      height: 131
+    inner:
+      serializedVersion: 2
+      x: 874
+      y: 984
+      width: 130
+      height: 131
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: CIRCLE4PXLAR
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 910
+      width: 204
+      height: 205
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 910
+      width: 204
+      height: 205
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: UIButton-Atlas
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 1121
+      width: 908
+      height: 927
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 1121
+      width: 908
+      height: 927
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0.1277533
+    paddingTop: 0.10463862
+    paddingBottom: 0
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}

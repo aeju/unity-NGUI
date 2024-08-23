@@ -1,0 +1,591 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8899206794911277589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7606792899133809191}
+  - component: {fileID: 583389892858877587}
+  m_Layer: 0
+  m_Name: UIIcon-Atlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7606792899133809191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8899206794911277589}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &583389892858877587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8899206794911277589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: ec9a2fa47045e49b6969392d22235355, type: 2}
+  sprites:
+  - name: Settings
+    outer:
+      serializedVersion: 2
+      x: 130
+      y: 637
+      width: 128
+      height: 127
+    inner:
+      serializedVersion: 2
+      x: 130
+      y: 637
+      width: 128
+      height: 127
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0.007874016
+  - name: Right Arrow
+    outer:
+      serializedVersion: 2
+      x: 260
+      y: 636
+      width: 68
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 260
+      y: 636
+      width: 68
+      height: 128
+    rotated: 0
+    paddingLeft: 0.44117647
+    paddingRight: 0.44117647
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Bell
+    outer:
+      serializedVersion: 2
+      x: 514
+      y: 896
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 514
+      y: 896
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Heart
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 3
+      width: 128
+      height: 111
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 3
+      width: 128
+      height: 111
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0.15315315
+    paddingBottom: 0
+  - name: Star
+    outer:
+      serializedVersion: 2
+      x: 130
+      y: 511
+      width: 128
+      height: 124
+    inner:
+      serializedVersion: 2
+      x: 130
+      y: 511
+      width: 128
+      height: 124
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0.016129032
+    paddingBottom: 0.016129032
+  - name: Icon Sets
+    outer:
+      serializedVersion: 2
+      x: 644
+      y: 896
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 644
+      y: 896
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Coin
+    outer:
+      serializedVersion: 2
+      x: 774
+      y: 896
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 774
+      y: 896
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Shop
+    outer:
+      serializedVersion: 2
+      x: 130
+      y: 265
+      width: 128
+      height: 118
+    inner:
+      serializedVersion: 2
+      x: 130
+      y: 265
+      width: 128
+      height: 118
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0.042372882
+    paddingBottom: 0.042372882
+  - name: Messages
+    outer:
+      serializedVersion: 2
+      x: 130
+      y: 50
+      width: 128
+      height: 102
+    inner:
+      serializedVersion: 2
+      x: 130
+      y: 50
+      width: 128
+      height: 102
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0.12745099
+    paddingBottom: 0.12745099
+  - name: Sound
+    outer:
+      serializedVersion: 2
+      x: 130
+      y: 385
+      width: 128
+      height: 124
+    inner:
+      serializedVersion: 2
+      x: 130
+      y: 385
+      width: 128
+      height: 124
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0.016129032
+    paddingBottom: 0.016129032
+  - name: Left BTN
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 766
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 766
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: X
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 636
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 636
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Inventory
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 506
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 506
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: World
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 376
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 376
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Ranks
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 246
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 246
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Up Arrow
+    outer:
+      serializedVersion: 2
+      x: 330
+      y: 696
+      width: 128
+      height: 68
+    inner:
+      serializedVersion: 2
+      x: 330
+      y: 696
+      width: 128
+      height: 68
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0.44117647
+    paddingBottom: 0.44117647
+  - name: Info
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 116
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 116
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Up BTN
+    outer:
+      serializedVersion: 2
+      x: 130
+      y: 766
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 130
+      y: 766
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Missions
+    outer:
+      serializedVersion: 2
+      x: 260
+      y: 766
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 260
+      y: 766
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Lock
+    outer:
+      serializedVersion: 2
+      x: 910
+      y: 766
+      width: 92
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 910
+      y: 766
+      width: 92
+      height: 128
+    rotated: 0
+    paddingLeft: 0.19565217
+    paddingRight: 0.19565217
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Add Icon
+    outer:
+      serializedVersion: 2
+      x: 390
+      y: 766
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 390
+      y: 766
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Close BTN
+    outer:
+      serializedVersion: 2
+      x: 520
+      y: 766
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 520
+      y: 766
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Down Arrow
+    outer:
+      serializedVersion: 2
+      x: 460
+      y: 696
+      width: 128
+      height: 68
+    inner:
+      serializedVersion: 2
+      x: 460
+      y: 696
+      width: 128
+      height: 68
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0.44117647
+    paddingBottom: 0.44117647
+  - name: Left Arrow
+    outer:
+      serializedVersion: 2
+      x: 260
+      y: 506
+      width: 68
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 260
+      y: 506
+      width: 68
+      height: 128
+    rotated: 0
+    paddingLeft: 0.44117647
+    paddingRight: 0.44117647
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Gem
+    outer:
+      serializedVersion: 2
+      x: 130
+      y: 154
+      width: 128
+      height: 109
+    inner:
+      serializedVersion: 2
+      x: 130
+      y: 154
+      width: 128
+      height: 109
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0.16513762
+    paddingBottom: 0.0091743115
+  - name: Music
+    outer:
+      serializedVersion: 2
+      x: 904
+      y: 896
+      width: 120
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 904
+      y: 896
+      width: 120
+      height: 128
+    rotated: 0
+    paddingLeft: 0.033333335
+    paddingRight: 0.033333335
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Down BTN
+    outer:
+      serializedVersion: 2
+      x: 650
+      y: 766
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 650
+      y: 766
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Divider
+    outer:
+      serializedVersion: 2
+      x: 590
+      y: 755
+      width: 256
+      height: 9
+    inner:
+      serializedVersion: 2
+      x: 590
+      y: 755
+      width: 256
+      height: 9
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: InputField
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 896
+      width: 512
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 896
+      width: 512
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Right BTN
+    outer:
+      serializedVersion: 2
+      x: 780
+      y: 766
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 780
+      y: 766
+      width: 128
+      height: 128
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
