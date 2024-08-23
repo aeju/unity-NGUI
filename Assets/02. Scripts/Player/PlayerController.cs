@@ -5,12 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float moveSpeed = 5f; // 이동 속도
+    public float moveSpeed = 2f; // 이동 속도
     private float moveHorizontal;
     
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private bool isFacingRight = true;
+    
+    public float jumpForce = 10f; // 점프 힘
+    // private bool isJumping = false;
 
     void Start()
     {
@@ -23,6 +26,14 @@ public class PlayerController : MonoBehaviour
     {
         // 입력 감지
         moveHorizontal = Input.GetAxisRaw("Horizontal");
+        
+        // 점프 입력 감지
+        // if (Input.GetKeyDown(KeyCode.LeftAlt) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            // isJumping = true;
+            Jump();
+        }
         
         // 방향 전환 체크
         if (moveHorizontal != 0)
@@ -49,6 +60,11 @@ public class PlayerController : MonoBehaviour
         rb.velocity = movement;
     }
     
+    void Jump()
+    {
+        rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+    }
+    
     void CheckFlip(bool isMovingRight)
     {
         // 현재 방향과 이동 방향이 다르면 뒤집기
@@ -71,4 +87,15 @@ public class PlayerController : MonoBehaviour
         bool isWalking = Mathf.Abs(moveHorizontal) > 0.1f;
         animator.SetBool("IsWalking", isWalking);
     }
+    
+    /*
+    // 바닥에 닿았을 때 점프 가능 상태로 변경
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+        }
+    }
+    */
 }
