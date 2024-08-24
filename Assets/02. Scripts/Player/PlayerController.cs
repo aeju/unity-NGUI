@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = movement;
     }
     
-    void Jump()
+    public void Jump()
     {
         rb.AddForce(new Vector2(0f, stats.jumpForce), ForceMode2D.Impulse);
         isJumping = true;
