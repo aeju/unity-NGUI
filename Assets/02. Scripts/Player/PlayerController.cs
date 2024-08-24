@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerStats stats;
     public UIButton jumpButton;
+    private bool isJumpButtonEnabled = true;
+    private BoxCollider jumpButtonCollider;
     
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
         // 점프 버튼 초기화 및 이벤트 연결
         if (jumpButton != null)
         {
+            jumpButtonCollider = jumpButton.GetComponent<BoxCollider>();
             UIEventListener.Get(jumpButton.gameObject).onClick += OnJumpButtonClicked;
             SetJumpButtonState(isGrounded);
         }
@@ -138,7 +141,17 @@ public class PlayerController : MonoBehaviour
     {
         if (jumpButton != null)
         {
-            jumpButton.isEnabled = enabled;
+            // 버튼의 시각적 상태는 변경하지 않음
+            // jumpButton.isEnabled = enabled;
+            
+            
+            isJumpButtonEnabled = enabled;
+            
+            // 대신 콜라이더를 통해 상호작용을 제어
+            if (jumpButtonCollider != null)
+            {
+                jumpButtonCollider.enabled = enabled;
+            }
         }
     }
 
