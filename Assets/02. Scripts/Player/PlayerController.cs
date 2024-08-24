@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [Header("# 플레이어 상태")]
     [SerializeField] private bool isFacingRight = true;
     [SerializeField] private bool isGrounded = true;
+    [SerializeField] private bool isJumping = false;
 
     private void Awake()
     {
@@ -94,7 +95,9 @@ public class PlayerController : MonoBehaviour
     {
         rb.AddForce(new Vector2(0f, stats.jumpForce), ForceMode2D.Impulse);
         isGrounded = false;
+        isJumping = true;
         SetJumpButtonState(false); // 점프 후 버튼 비활성화
+        animator.SetBool("IsJumping", true); // 점프 애니메이션 시작
     }
     
     // 현재 방향과 이동 방향이 다르면, 캐릭터 보는 방향 뒤집기
@@ -113,6 +116,16 @@ public class PlayerController : MonoBehaviour
         // 이동 중이면 walk 애니메이션, 그렇지 않으면 idle 애니메이션
         bool isWalking = Mathf.Abs(moveHorizontal) > 0.1f;
         animator.SetBool("IsWalking", isWalking);
+        
+        // 점프 상태 업데이트
+        if (!isGrounded && rb.velocity.y > 0)
+        {
+            animator.SetBool("IsJumping", true);
+        }
+        else if (isGrounded)
+        {
+            animator.SetBool("IsJumping", false);
+        }
     }
     
     // 바닥에 닿았을 때, 점프 가능 상태로 변경
@@ -121,7 +134,9 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            isJumping = false; 
             SetJumpButtonState(true); // 점프 버튼 활성화 
+            animator.SetBool("IsJumping", false); // 점프 애니메이션 종료
         }
     }
     

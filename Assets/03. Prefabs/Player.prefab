@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1342980140375676267}
   - component: {fileID: 121316456070652336}
   - component: {fileID: 460195074940168465}
-  - component: {fileID: 8710722521867190518}
   - component: {fileID: 7284365386011957227}
+  - component: {fileID: 8710722521867190518}
   - component: {fileID: 213020035239118863}
   - component: {fileID: 3867910874412861091}
   m_Layer: 0
@@ -138,22 +138,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8710722521867190518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095756996319780706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 886e94c8c04c045b29b16cf112a16dbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stats: {fileID: 213020035239118863}
-  jumpButton: {fileID: 0}
-  isFacingRight: 1
-  isGrounded: 1
 --- !u!70 &7284365386011957227
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -189,6 +173,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.43, y: 0.68}
   m_Direction: 0
+--- !u!114 &8710722521867190518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095756996319780706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886e94c8c04c045b29b16cf112a16dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 213020035239118863}
+  jumpButton: {fileID: 0}
+  isFacingRight: 1
+  isGrounded: 1
 --- !u!114 &213020035239118863
 MonoBehaviour:
   m_ObjectHideFlags: 0
