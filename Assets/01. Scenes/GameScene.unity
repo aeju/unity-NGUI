@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 12818586}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1404.1161, y: -789.8151, z: 0}
+  m_LocalPosition: {x: -2106.174, y: -1184.7227, z: 0}
   m_LocalScale: {x: 0.66600007, y: 0.66600007, z: 0.66600007}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -306,8 +306,8 @@ GameObject:
   - component: {fileID: 59806248}
   - component: {fileID: 59806247}
   - component: {fileID: 59806245}
-  m_Layer: 5
-  m_Name: Jump Button  (1)
+  m_Layer: 8
+  m_Name: 'Jump Button  '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -441,7 +441,7 @@ Transform:
   m_GameObject: {fileID: 80164931}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1404.1162, y: 789.81537, z: 0}
+  m_LocalPosition: {x: 2106.174, y: 1184.7229, z: 0}
   m_LocalScale: {x: 0.66600007, y: 0.66600007, z: 0.66600007}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -601,8 +601,8 @@ Transform:
   m_GameObject: {fileID: 106870050}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1404.1162, y: 789.81537, z: 0}
-  m_LocalScale: {x: 1280, y: 720, z: 0.66600007}
+  m_LocalPosition: {x: -2106.174, y: 1184.7229, z: 0}
+  m_LocalScale: {x: 1920, y: 1080, z: 0.66600007}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1254638225}
@@ -839,17 +839,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 360
+    e00: 540
     e01: 0
     e02: 0
     e03: -0
     e10: 0
-    e11: 360
+    e11: 540
     e12: 0
-    e13: -360
+    e13: -540
     e20: 0
     e21: 0
-    e22: 360
+    e22: 540
     e23: -0
     e30: 0
     e31: 0
@@ -1461,7 +1461,7 @@ Transform:
   m_GameObject: {fileID: 512858279}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1404.1161, y: -789.8151, z: 0}
+  m_LocalPosition: {x: 2106.174, y: -1184.7227, z: 0}
   m_LocalScale: {x: 0.66600007, y: 0.66600007, z: 0.66600007}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1948,7 +1948,7 @@ Transform:
   m_GameObject: {fileID: 631076725}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -789.8151, z: 0}
+  m_LocalPosition: {x: 0, y: -1184.7227, z: 0}
   m_LocalScale: {x: 0.66600007, y: 0.66600007, z: 0.66600007}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2704,8 +2704,8 @@ Transform:
   m_GameObject: {fileID: 953554572}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 366, y: 489, z: 0}
-  m_LocalScale: {x: 850, y: 850, z: 1}
+  m_LocalPosition: {x: 625, y: 760, z: 0}
+  m_LocalScale: {x: 1200, y: 1200, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1326356852}
@@ -3025,7 +3025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1074531868}
   - component: {fileID: 1074531869}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: "Buttons (\uCEE8\uD14C\uC774\uB108 \uC5ED\uD560)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3041,7 +3041,7 @@ Transform:
   m_GameObject: {fileID: 1074531867}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -917, y: 239, z: 0}
+  m_LocalPosition: {x: -1506, y: 586, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3067,17 +3067,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 540.54047
+    e00: 810.8107
     e01: 0
     e02: 0
-    e03: -1202.2822
+    e03: -1667.4231
     e10: 0
-    e11: 540.54047
+    e11: 810.8107
     e12: 0
-    e13: 337.36798
+    e13: 313.05194
     e20: 0
     e21: 0
-    e22: 540.54047
+    e22: 810.8107
     e23: 0
     e30: 0
     e31: 0
@@ -3170,7 +3170,7 @@ Transform:
   m_GameObject: {fileID: 1100031312}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1404.1162, y: -789.8151, z: 0}
+  m_LocalPosition: {x: 2106.174, y: -1184.7227, z: 0}
   m_LocalScale: {x: 0.66600007, y: 0.66600007, z: 0.66600007}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3339,7 +3339,7 @@ Transform:
   m_GameObject: {fileID: 1141403351}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 365.99997, y: 488.99994, z: 0}
+  m_LocalPosition: {x: 625, y: 760, z: 0}
   m_LocalScale: {x: 200.00005, y: 200.00005, z: 0.23986}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3523,7 +3523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1211288136}
   - component: {fileID: 1211288137}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3538,13 +3538,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211288135}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -126, y: -50, z: 0}
-  m_LocalScale: {x: 200, y: 200, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.10837667, w: 0.9941099}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 300, y: 300, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 59806244}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 12.444}
 --- !u!114 &1211288137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3558,7 +3558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
-  mPivot: 4
+  mPivot: 5
   mDepth: 0
   mAtlas: {fileID: 583389892858877587, guid: 0725fc24d3aa84b0dbad939a535a0979, type: 3}
   mSpriteName: Left BTN
@@ -3652,7 +3652,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 256
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3735,9 +3735,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scalingStyle: 2
   automatic: 0
-  manualHeight: 720
-  minimumHeight: 320
-  maximumHeight: 1536
+  manualHeight: 1080
+  minimumHeight: 1280
+  maximumHeight: 2960
 --- !u!4 &1275178248
 Transform:
   m_ObjectHideFlags: 0
@@ -3748,7 +3748,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.0027777778, y: 0.0027777778, z: 0.0027777778}
+  m_LocalScale: {x: 0.0018518518, y: 0.0018518518, z: 0.0018518518}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1254638225}
@@ -3793,17 +3793,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 360
+    e00: 540
     e01: 0
     e02: 0
     e03: -0
     e10: 0
-    e11: 360
+    e11: 540
     e12: 0
-    e13: -360
+    e13: -540
     e20: 0
     e21: 0
-    e22: 360
+    e22: 540
     e23: -0
     e30: 0
     e31: 0
@@ -3856,7 +3856,7 @@ Transform:
   m_GameObject: {fileID: 1276732152}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1404.1162, y: 0, z: 0}
+  m_LocalPosition: {x: 2106.174, y: 0, z: 0}
   m_LocalScale: {x: 0.66600007, y: 0.66600007, z: 0.66600007}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3909,7 +3909,7 @@ Transform:
   m_GameObject: {fileID: 1294559965}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 365.99997, y: 488.99994, z: 0}
+  m_LocalPosition: {x: 625, y: 760, z: 0}
   m_LocalScale: {x: 250.00006, y: 250.00006, z: 0.23986}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4002,6 +4002,7 @@ GameObject:
   - component: {fileID: 1303249175}
   - component: {fileID: 1303249174}
   - component: {fileID: 1303249173}
+  - component: {fileID: 1303249176}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4026,8 +4027,8 @@ Camera:
   m_GameObject: {fileID: 1303249172}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 0.9038367, b: 0.4470588, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4056,7 +4057,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967263
+    m_Bits: 31
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -4083,6 +4084,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1303249176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303249172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8241efb9ab3fd4a278d12b763d0c5f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 283635599}
 --- !u!1 &1326356851
 GameObject:
   m_ObjectHideFlags: 0
@@ -4516,7 +4530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1527796581
 Transform:
   m_ObjectHideFlags: 0
@@ -4582,7 +4596,7 @@ Transform:
   m_GameObject: {fileID: 1540071168}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1404.1162, y: 0, z: 0}
+  m_LocalPosition: {x: -2106.174, y: 0, z: 0}
   m_LocalScale: {x: 0.66600007, y: 0.66600007, z: 0.66600007}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4749,7 +4763,7 @@ Transform:
   m_GameObject: {fileID: 1607180635}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 789.81537, z: 0}
+  m_LocalPosition: {x: 0, y: 1184.7229, z: 0}
   m_LocalScale: {x: 0.66600007, y: 0.66600007, z: 0.66600007}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5101,7 +5115,7 @@ Transform:
   m_GameObject: {fileID: 1823946809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1404.1161, y: 789.8153, z: 0}
+  m_LocalPosition: {x: -2106.174, y: 1184.7229, z: 0}
   m_LocalScale: {x: 0.66600007, y: 0.66600007, z: 0.66600007}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5212,17 +5226,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 360
+    e00: 540
     e01: 0
     e02: 0
     e03: -0
     e10: 0
-    e11: 360
+    e11: 540
     e12: 0
-    e13: -360
+    e13: -540
     e20: 0
     e21: 0
-    e22: 360
+    e22: 540
     e23: -0
     e30: 0
     e31: 0
