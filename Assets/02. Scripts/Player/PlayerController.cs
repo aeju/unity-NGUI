@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerStats))]
 public class PlayerController : MonoBehaviour
 {
     public PlayerStats stats;
@@ -12,14 +14,16 @@ public class PlayerController : MonoBehaviour
     
     private float moveHorizontal;
     
+    [Header("# 플레이어 상태")]
     private bool isFacingRight = true;
     private bool isJumping = false;
 
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        stats = GetComponent<PlayerStats>();
     }
 
     void Update()
@@ -30,7 +34,6 @@ public class PlayerController : MonoBehaviour
         // 점프 입력 감지
         if (Input.GetKeyDown(KeyCode.LeftAlt) && !isJumping)
         {
-            isJumping = true;
             Jump();
         }
         
@@ -62,22 +65,18 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         rb.AddForce(new Vector2(0f, stats.jumpForce), ForceMode2D.Impulse);
+        isJumping = true;
     }
     
+    // 현재 방향과 이동 방향이 다르면, 캐릭터 보는 방향 뒤집기
     void CheckFlip(bool isMovingRight)
     {
-        // 현재 방향과 이동 방향이 다르면 뒤집기
+        
         if (isMovingRight != isFacingRight)
         {
-            Flip();
+            isFacingRight = !isFacingRight;
+            spriteRenderer.flipX = !spriteRenderer.flipX;
         }
-    }
-    
-    // 캐릭터 보는 방향 뒤집기
-    void Flip()
-    {
-        isFacingRight = !isFacingRight;
-        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
     
     void UpdateAnimationState()

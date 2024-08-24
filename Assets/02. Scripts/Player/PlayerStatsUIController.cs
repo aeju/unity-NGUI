@@ -3,29 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+[RequireComponent(typeof(PlayerStats))]
 public class PlayerStatsUIController : MonoBehaviour
 {
-    public PlayerStats playerStats;
+    [SerializeField] private UIStatsDisplay uiStatsDisplay;
+    private PlayerStats playerStats;
     
+    /*
     public UISlider hpSlider;
     public UILabel currentHpLabel;
     
     public UISlider mpSlider;
     public UILabel currentMpLabel;
+    */
 
-    private void Start()
+    private void Awake()
     {
-        if (playerStats == null)
-        {
-            playerStats = GetComponent<PlayerStats>();
-        }
-
+        playerStats = GetComponent<PlayerStats>();
+        
         if (playerStats == null)
         {
             Debug.LogError("PlayerStats component not found!");
             return;
         }
+    }
 
+    
+    private void Start()
+    {
+        if (uiStatsDisplay == null)
+        {
+            Debug.LogError("UIStatsDisplay component not found!");
+            return;
+        }
+        
         UpdateUI();
     }
 
@@ -36,6 +47,10 @@ public class PlayerStatsUIController : MonoBehaviour
 
     private void UpdateUI()
     {
+        uiStatsDisplay.UpdateHealthUI(playerStats.currentHealth, playerStats.maxHealth);
+        uiStatsDisplay.UpdateManaUI(playerStats.currentMana, playerStats.maxMana);
+        
+        /*
         // Update HP UI
         if (hpSlider != null)
         {
@@ -57,5 +72,6 @@ public class PlayerStatsUIController : MonoBehaviour
         {
             currentMpLabel.text = playerStats.currentMana.ToString();
         }
+        */
     }
 }

@@ -747,11 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ce192b97fab4b9bb6ba355c2b9930b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 283635601}
-  hpSlider: {fileID: 1634584826}
-  currentHpLabel: {fileID: 522093687}
-  mpSlider: {fileID: 1423899769}
-  currentMpLabel: {fileID: 1139665849}
+  uiStatsDisplay: {fileID: 1275178251}
 --- !u!1 &303445226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,9 +999,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522093685}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 741, y: -72, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 740.9999, y: -72.00001, z: 0}
+  m_LocalScale: {x: 60, y: 59.999996, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1634584825}
@@ -2308,7 +2304,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 741, y: -76, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalScale: {x: 60, y: 60, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1423899768}
@@ -2533,6 +2529,7 @@ GameObject:
   - component: {fileID: 1275178247}
   - component: {fileID: 1275178249}
   - component: {fileID: 1275178250}
+  - component: {fileID: 1275178251}
   m_Layer: 8
   m_Name: UI Root (2D)
   m_TagString: Untagged
@@ -2633,6 +2630,22 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
+--- !u!114 &1275178251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275178246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2bf3b004622f407a85eccc0dcbff780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpSlider: {fileID: 1634584826}
+  hpLabel: {fileID: 522093687}
+  mpSlider: {fileID: 1423899769}
+  mpLabel: {fileID: 1139665849}
 --- !u!1 &1294559965
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,7 +2744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 3
   mDepth: 5
   mAtlas: {fileID: 8005909330716535128, guid: 8d5dc7ec967e343b88004b0a4cb5b447, type: 3}
@@ -3515,7 +3528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 0, g: 0, b: 0, a: 1}
   mPivot: 3
   mDepth: 5
   mAtlas: {fileID: 8005909330716535128, guid: 8d5dc7ec967e343b88004b0a4cb5b447, type: 3}

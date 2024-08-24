@@ -17,6 +17,6 @@ public class PlayerStats : MonoBehaviour
     public float moveSpeed = 2f;
     public float jumpForce = 4f;
 
-    public int level;
-    public float exp;
+    public int level = 1;
+    public float exp = 0;
 }
