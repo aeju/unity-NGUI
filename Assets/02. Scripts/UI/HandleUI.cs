@@ -59,7 +59,13 @@ public class HandleUI : MonoBehaviour
             Vector2 dragDelta = new Vector2(newPosition.x - originalPosition.x, newPosition.y - originalPosition.y);
             
             // 원형 제한 적용
-            dragDelta = Vector2.ClampMagnitude(dragDelta, dragRadius);
+            //dragDelta = Vector2.ClampMagnitude(dragDelta, dragRadius);
+            
+            // dragRadius 이상으로 드래그해도, 핸들 유지 
+            if (dragDelta.magnitude > dragRadius)
+            {
+                dragDelta = dragDelta.normalized * dragRadius;
+            }
             
             newPosition.x = originalPosition.x + dragDelta.x;
             newPosition.y = originalPosition.y + dragDelta.y;
