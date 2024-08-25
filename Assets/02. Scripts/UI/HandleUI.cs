@@ -7,6 +7,8 @@ public class HandleUI : MonoBehaviour
     private Vector3 originalPosition;
     private Vector3 offset;
     private bool isDragging = false;
+    
+    public float dragRadius = 1f;
 
     void Start()
     {
@@ -33,7 +35,19 @@ public class HandleUI : MonoBehaviour
     {
         if (isDragging)
         {
-            transform.position = GetMouseWorldPosition() + offset;
+            // transform.position = GetMouseWorldPosition() + offset;
+            
+            Vector3 newPosition = GetMouseWorldPosition() + offset;
+            Vector2 dragDelta = new Vector2(newPosition.x - originalPosition.x, newPosition.y - originalPosition.y);
+            
+            // 원형 제한 적용
+            dragDelta = Vector2.ClampMagnitude(dragDelta, dragRadius);
+            
+            newPosition.x = originalPosition.x + dragDelta.x;
+            newPosition.y = originalPosition.y + dragDelta.y;
+            newPosition.z = originalPosition.z;  // Z 위치는 변경하지 않음
+
+            transform.position = newPosition;
         }
     }
 
