@@ -8,11 +8,29 @@ public class HandleUI : MonoBehaviour
     private Vector3 offset;
     private bool isDragging = false;
     
-    public float dragRadius = 1f;
+    private float dragRadius; // handleSprite / targetSprite
+    public UISprite targetSprite;
+    private UISprite handleSprite;
 
     void Start()
     {
         originalPosition = transform.position;
+        
+        handleSprite = GetComponent<UISprite>();
+        Debug.Log("handle's radius" + handleSprite.transform.localScale.x);
+        
+        if (targetSprite != null && handleSprite != null)
+        {
+            // dragRadius를 handleSprite와 targetSprite의 localScale.x 비율로 설정
+            dragRadius = handleSprite.transform.localScale.x / targetSprite.transform.localScale.x;
+            Debug.Log("Handle's scale: " + handleSprite.transform.localScale.x);
+            Debug.Log("Target's scale: " + targetSprite.transform.localScale.x);
+            Debug.Log("Drag radius set to: " + dragRadius);
+        }
+        else
+        {
+            Debug.LogError("Target UISprite or Handle UISprite is not assigned!");
+        }
     }
 
     void OnPress(bool isPressed)
