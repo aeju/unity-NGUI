@@ -10,6 +10,11 @@ public class UIStatsDisplay : MonoBehaviour
     public UISlider mpSlider;
     public UILabel mpLabel;
 
+    public UISlider expSlider;
+    public UILabel expLable;
+
+    public UILabel combatPower; // 공격력
+    
     public void UpdateHealthUI(int currentHealth, int maxHealth)
     {
         if (hpSlider != null)

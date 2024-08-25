@@ -81,4 +81,23 @@ public class HandleUI : MonoBehaviour
         mousePoint.z = -Camera.main.transform.position.z;
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
+    
+    // 조이스틱의 현재 값을 얻는 메서드
+    public Vector2 GetJoystickValue()
+    {
+        if (targetSprite == null) return Vector2.zero;
+
+        Vector2 diff = transform.position - targetSprite.transform.position;
+        return diff / (targetSprite.transform.localScale.x * dragRadius);
+    }
+
+    private float previousHorizontalValue = 0f;
+    
+    // 수평 입력값만 반환하는 메서드
+    public float GetHorizontalValue()
+    {
+        float currentValue = GetJoystickValue().x;
+        
+        return GetJoystickValue().x;
+    }
 }
