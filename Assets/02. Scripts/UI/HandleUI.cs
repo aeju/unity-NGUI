@@ -91,13 +91,9 @@ public class HandleUI : MonoBehaviour
         return diff / (targetSprite.transform.localScale.x * dragRadius);
     }
 
-    private float previousHorizontalValue = 0f;
-    
     // 수평 입력값만 반환하는 메서드
     public float GetHorizontalValue()
     {
-        float currentValue = GetJoystickValue().x;
-        
         return GetJoystickValue().x;
     }
 }

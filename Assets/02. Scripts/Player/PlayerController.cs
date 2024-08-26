@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerStats stats;
     public UIButton jumpButton;
+    public HandleUI joystick;
+    public float joystickSensitivity = 5f;
+    
     private bool isJumpButtonEnabled = true;
     private BoxCollider jumpButtonCollider;
     
@@ -48,7 +51,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // 입력 감지
-        moveHorizontal = Input.GetAxisRaw("Horizontal");
+        // moveHorizontal = Input.GetAxisRaw("Horizontal");
+        
+        // 조이스틱 입력 사용
+        // moveHorizontal = moveHorizontal = joystick.GetHorizontalValue();
+        
+        // 조이스틱 입력 사용 및 감도 적용
+        moveHorizontal = joystick.GetHorizontalValue() * joystickSensitivity;
         
         // 점프 입력 감지
         if (Input.GetKeyDown(KeyCode.LeftAlt))
@@ -79,6 +88,9 @@ public class PlayerController : MonoBehaviour
 
         // Rigidbody2D의 속도 설정
         rb.velocity = movement;
+
+        // 디버그 로그 추가
+        Debug.Log($"Move: Horizontal = {moveHorizontal}, Velocity = {rb.velocity}");
     }
 
     // 우선 점프 : 시도부터
@@ -156,10 +168,6 @@ public class PlayerController : MonoBehaviour
     {
         if (jumpButton != null)
         {
-            // 버튼의 시각적 상태는 변경하지 않음
-            // jumpButton.isEnabled = enabled;
-            
-            
             isJumpButtonEnabled = enabled;
             
             // 대신 콜라이더를 통해 상호작용을 제어
