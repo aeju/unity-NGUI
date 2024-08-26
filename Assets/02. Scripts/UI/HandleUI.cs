@@ -8,9 +8,12 @@ public class HandleUI : MonoBehaviour
     private Vector3 offset;
     private bool isDragging = false;
     
-    private float dragRadius; // handleSprite / targetSprite
+    // 0.2 -> 배경 안에서만 드래그 가능 
+    public float dragRadius; // handleSprite / targetSprite
     public UISprite targetSprite;
     private UISprite handleSprite;
+
+    private int depth;
 
     void Start()
     {
