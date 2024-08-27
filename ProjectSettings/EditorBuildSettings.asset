@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/01. Scenes/FirstScene.unity
+    path: Assets/01. Scenes/Basic/FirstScene.unity
     guid: e72a46e72eea94ce081608940a59f6d0
   - enabled: 0
-    path: Assets/01. Scenes/JoyStickScene.unity
+    path: Assets/01. Scenes/Joystick/JoyStickScene.unity
     guid: 13db8388b081144b7adecce44d4299ef
   - enabled: 1
     path: Assets/01. Scenes/MainScene.unity
     guid: cbfb18823b6264cf3a26ed9e5154a589
   - enabled: 0
-    path: Assets/01. Scenes/JoysStickMoveScene.unity
+    path: Assets/01. Scenes/Joystick/JoysStickMoveScene.unity
     guid: 35e998ec229f6450c851e88e1fadb5c8
   m_configObjects: {}
