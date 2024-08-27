@@ -45,7 +45,223 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 97e2e754a681547a186b0d8fdcf65920, type: 2}
-  sprites: []
+  sprites:
+  - name: BTN_A2
+    outer:
+      serializedVersion: 2
+      x: 520
+      y: 754
+      width: 388
+      height: 131
+    inner:
+      serializedVersion: 2
+      x: 520
+      y: 754
+      width: 388
+      height: 131
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Button_Small_A
+    outer:
+      serializedVersion: 2
+      x: 518
+      y: 484
+      width: 256
+      height: 129
+    inner:
+      serializedVersion: 2
+      x: 518
+      y: 484
+      width: 256
+      height: 129
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: BTN_Line_4PX_Small
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 210
+      width: 260
+      height: 133
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 210
+      width: 260
+      height: 133
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Button_Large_A
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 619
+      width: 512
+      height: 129
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 619
+      width: 512
+      height: 129
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: BTN_A1
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 73
+      width: 258
+      height: 131
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 73
+      width: 258
+      height: 131
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: BTN_Line_4PX_Large
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 891
+      width: 516
+      height: 133
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 891
+      width: 516
+      height: 133
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Button_Medium_A
+    outer:
+      serializedVersion: 2
+      x: 518
+      y: 619
+      width: 386
+      height: 129
+    inner:
+      serializedVersion: 2
+      x: 518
+      y: 619
+      width: 386
+      height: 129
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ButtonMediumRound
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 349
+      width: 386
+      height: 129
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 349
+      width: 386
+      height: 129
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ButtonSmallRound
+    outer:
+      serializedVersion: 2
+      x: 518
+      y: 349
+      width: 256
+      height: 129
+    inner:
+      serializedVersion: 2
+      x: 518
+      y: 349
+      width: 256
+      height: 129
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ButtonLargeRound
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 484
+      width: 512
+      height: 129
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 484
+      width: 512
+      height: 129
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: BTN_A3
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 754
+      width: 514
+      height: 131
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 754
+      width: 514
+      height: 131
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: BTN_Line_4PX_Medium
+    outer:
+      serializedVersion: 2
+      x: 522
+      y: 891
+      width: 390
+      height: 133
+    inner:
+      serializedVersion: 2
+      x: 522
+      y: 891
+      width: 390
+      height: 133
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   mCoordinates: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
