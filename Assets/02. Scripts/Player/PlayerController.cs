@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public PlayerStats stats;
     public UIButton jumpButton;
     public HandleUI joystick;
-    public float joystickSensitivity = 5f;
+    public float joystickSensitivity = 500f;
     
     private bool isJumpButtonEnabled = true;
     private BoxCollider jumpButtonCollider;
