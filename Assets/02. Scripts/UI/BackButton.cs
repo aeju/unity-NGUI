@@ -20,7 +20,7 @@ public class BackButton : MonoBehaviour
             {
                 HidePopup();
             }
-            else
+            else if (currentPopup == null)
             {
                 ShowPopup();
             }
@@ -32,22 +32,7 @@ public class BackButton : MonoBehaviour
         // 이미 팝업이 표시되어 있다면 무시
         if (currentPopup != null)
             return;
-
         
-        // 팝업 인스턴스화
-        //currentPopup = NGUITools.AddChild(gameObject, popupPrefab);
-        
-        //GameObject popupObject = NGUITools.AddChild(gameObject, popupPrefab.gameObject);
-        //currentPopup = popupObject.GetComponent<YesNoPopup>();
-        
-        // 팝업 활성화
-        /*
-        if (!popupObject.activeSelf)
-        {
-            //NGUITools.SetActive(popupPrefab, true);
-            NGUITools.SetActive(popupObject, true);
-        }
-        */
         
         // 팝업 인스턴스화
         if (currentPopup == null)
@@ -62,27 +47,6 @@ public class BackButton : MonoBehaviour
         YesNoPopup yesNoPopup = currentPopup as YesNoPopup;
         if (yesNoPopup != null)
         {
-            /*
-            // 팝업 내용 설정
-            if (currentPopup.titleLabel != null)
-                currentPopup.titleLabel.text = "종료 확인";
-            if (currentPopup.messageLabel != null)
-                currentPopup.messageLabel.text = "정말로 종료하시겠습니까?";
-            if (currentPopup.yesButton)
-
-            // 버튼 내용 설정
-            if (currentPopup.yesButtonLabel != null)
-                    currentPopup.yesButtonLabel.text = "예";
-            if (currentPopup.noButtonLabel != null)
-                currentPopup.noButtonLabel.text = "아니오";
-            
-            // 버튼 이벤트 설정
-            if (currentPopup.yesButton != null)
-                UIEventListener.Get(currentPopup.yesButton.gameObject).onClick += OnYesClicked;
-            if (currentPopup.noButton != null)
-                UIEventListener.Get(currentPopup.noButton.gameObject).onClick += OnNoClicked;
-                */
-            
             if (yesNoPopup.TitleLabel != null)
                 yesNoPopup.TitleLabel.text = "종료 확인";
             if (yesNoPopup.MessageLabel != null)
@@ -114,16 +78,6 @@ public class BackButton : MonoBehaviour
         if (currentPopup != null)
         {
             HidePopup();
-            /*
-            // 이벤트 리스너 제거
-            if (currentPopup.yesButton != null)
-                UIEventListener.Get(currentPopup.yesButton.gameObject).onClick -= OnYesClicked;
-            if (currentPopup.noButton != null)
-                UIEventListener.Get(currentPopup.noButton.gameObject).onClick -= OnNoClicked;
-            
-            Destroy(currentPopup.gameObject);
-            currentPopup = null;
-            */
         }
     }
     
@@ -139,9 +93,12 @@ public class BackButton : MonoBehaviour
                     UIEventListener.Get(yesNoPopup.YesButton.gameObject).onClick -= OnYesClicked;
                 if (yesNoPopup.NoButton != null)
                     UIEventListener.Get(yesNoPopup.NoButton.gameObject).onClick -= OnNoClicked;
+                
+                Destroy(yesNoPopup.gameObject);
             }
-
+            
             currentPopup.Hide();
+            currentPopup = null;
         }
     }
 }
