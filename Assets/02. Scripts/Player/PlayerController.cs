@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public UIButton jumpButton;
     public HandleUI joystick;
     public float joystickSensitivity = 500f;
+    public float attackTime = 0.5f;
     
     private bool isJumpButtonEnabled = true;
     private BoxCollider jumpButtonCollider;
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isFacingRight = true;
     [SerializeField] private bool isGrounded = true;
     [SerializeField] private bool isJumping = false;
+    [SerializeField] private bool isAttacking = false;
 
     private void Awake()
     {
@@ -63,6 +65,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             TryJump();
+        }
+        
+        // 공격 입력 감지 + 점프 상태 아닐 때 
+        if (Input.GetKeyDown(KeyCode.Z) && !isJumping)
+        {
+            Attack();
         }
         
         // 방향 전환 체크
@@ -182,5 +190,26 @@ public class PlayerController : MonoBehaviour
     private void OnJumpButtonClicked(GameObject go)
     {
         TryJump();
+    }
+
+    private void Attack()
+    {
+        if (!isAttacking)
+        {
+            Debug.Log("Attack method called");
+            StartCoroutine(PerformAttack());
+        }
+    }
+    
+    // 공격 코루틴
+    private IEnumerator PerformAttack()
+    {
+        isAttacking = true;
+        animator.SetTrigger("Attack");
+
+        // 공격 애니메이션 길이만큼 대기
+        yield return new WaitForSeconds(attackTime); // 0.5f 
+
+        isAttacking = false;
     }
 }

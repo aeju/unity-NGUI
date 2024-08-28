@@ -15,7 +15,7 @@ public class PlayerNicknameUI : MonoBehaviour
     public Camera uiCamera;
 
     // 매 프레임마다 위젯 위치를 갱신
-    private void Update()
+    private void FixedUpdate()
     {
         if (target != null)
         {
