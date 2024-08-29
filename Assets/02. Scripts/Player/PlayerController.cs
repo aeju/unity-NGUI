@@ -7,17 +7,24 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public PlayerStats stats;
+    public PlayerInputManager inputManager;
+
+    /*
     public UIButton jumpButton;
     public UIButton basicAttackButton;
     public UIJoystickHandle joystick;
     public float joystickSensitivity = 500f;
+    */
+    
     public float attackTime = 1f;
     
+    /*
     private bool isJumpButtonEnabled = true;
     private BoxCollider jumpButtonCollider;
     
     private BoxCollider basicAttackButtonCollider;
     private bool isBasicAttackButtonEnabled = true;
+    */
     
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -31,7 +38,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isJumping = false;
     [SerializeField] private bool isAttacking = false;
 
-    private void Awake()
+    private void Awake() // 컴포넌트 초기화 
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -41,6 +48,19 @@ public class PlayerController : MonoBehaviour
     
     private void Start()
     {
+        // 입력 이벤트 연결 (점프, 공격)
+        if (inputManager != null)
+        {
+            inputManager.OnJumpButtonClicked += TryJump;
+            inputManager.OnBasicAttackButtonClicked += Attack;
+        }
+        else 
+        {
+            Debug.LogError("PlayerInputManager is not assigned to the PlayerController!");
+            return;
+        }
+        
+        /*
         // 점프 버튼 초기화 및 이벤트 연결
         if (jumpButton != null)
         {
@@ -63,6 +83,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.LogError("Basic attack button is not assigned to the PlayerController!");
         }
+        */
     }
 
     void Update()
@@ -74,8 +95,10 @@ public class PlayerController : MonoBehaviour
         // moveHorizontal = moveHorizontal = joystick.GetHorizontalValue();
         
         // 조이스틱 입력 사용 및 감도 적용
-        moveHorizontal = joystick.GetHorizontalValue() * joystickSensitivity;
+        // moveHorizontal = joystick.GetHorizontalValue() * joystickSensitivity;
+        moveHorizontal = inputManager.GetHorizontalInput();
         
+        /*
         // 점프 입력 감지
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
@@ -87,6 +110,7 @@ public class PlayerController : MonoBehaviour
         {
             Attack();
         }
+        */
         
         // 방향 전환 체크
         if (moveHorizontal != 0)
@@ -106,17 +130,11 @@ public class PlayerController : MonoBehaviour
     
     void Move()
     {
-        // 이동 벡터 계산
-        Vector2 movement = new Vector2(moveHorizontal * stats.moveSpeed, rb.velocity.y);
-
-        // Rigidbody2D의 속도 설정
-        rb.velocity = movement;
-
-        // 디버그 로그 추가
-        Debug.Log($"Move: Horizontal = {moveHorizontal}, Velocity = {rb.velocity}");
+        Vector2 movement = new Vector2(moveHorizontal * stats.moveSpeed, rb.velocity.y); // 이동 벡터 계산
+        rb.velocity = movement; // Rigidbody2D의 속도 설정
     }
 
-    // 우선 점프 : 시도부터
+    // 점프 시도
     public void TryJump()
     {
         if (isGrounded)
@@ -131,14 +149,14 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(new Vector2(0f, stats.jumpForce), ForceMode2D.Impulse);
         isGrounded = false;
         isJumping = true;
-        SetJumpButtonState(false); // 점프 후 버튼 비활성화
+        // SetJumpButtonState(false); // 점프 후 버튼 비활성화
+        inputManager.SetButtonState(inputManager.jumpButton, false);
         animator.SetBool("IsJumping", true); // 점프 애니메이션 시작
     }
     
     // 현재 방향과 이동 방향이 다르면, 캐릭터 보는 방향 뒤집기
     void CheckFlip(bool isMovingRight)
     {
-        
         if (isMovingRight != isFacingRight)
         {
             isFacingRight = !isFacingRight;
@@ -170,7 +188,8 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
             isJumping = false; 
-            SetJumpButtonState(true); // 점프 버튼 활성화 
+            // SetJumpButtonState(true); // 점프 버튼 활성화 
+            inputManager.SetButtonState(inputManager.jumpButton, true);
             animator.SetBool("IsJumping", false); // 점프 애니메이션 종료
         }
     }
@@ -186,6 +205,7 @@ public class PlayerController : MonoBehaviour
     }
     */
     
+    /*
     // 점프 버튼 활성화 상태 설정 
     private void SetJumpButtonState(bool enabled)
     {
@@ -200,22 +220,27 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    */
 
+    /*
     // 점프 버튼 클릭 이벤트 핸들러 
     private void OnJumpButtonClicked(GameObject go)
     {
         TryJump();
     }
+    */
 
     private void Attack()
     {
-        if (!isAttacking && isBasicAttackButtonEnabled)
+        // if (!isAttacking && isBasicAttackButtonEnabled)
+        if (!isAttacking && inputManager.basicAttackButton.isEnabled)
         {
             Debug.Log("Attack method called");
             StartCoroutine(PerformAttack());
         }
     }
     
+    /*
     // 기본 공격 버튼 활성화 상태 설정 
     private void SetBasicAttackButtonState(bool enabled)
     {
@@ -229,24 +254,29 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    */
     
+    /*
     // 기본 공격 버튼 클릭 이벤트 핸들러 
     private void OnBasicAttackButtonClicked(GameObject go)
     {
         Attack();
     }
+    */
     
     // 공격 코루틴
     private IEnumerator PerformAttack()
     {
         isAttacking = true;
-        SetBasicAttackButtonState(false); // 공격 시작 시 버튼 비활성화
+        // SetBasicAttackButtonState(false); // 공격 시작 시 버튼 비활성화
+        inputManager.SetButtonState(inputManager.basicAttackButton, false);
         animator.SetTrigger("Attack");
 
         // 공격 애니메이션 길이만큼 대기
         yield return new WaitForSeconds(attackTime); // 0.5f 
 
         isAttacking = false;
-        SetBasicAttackButtonState(true); // 공격 종료 후 버튼 다시 활성화
+        // SetBasicAttackButtonState(true); // 공격 종료 후 버튼 다시 활성화
+        inputManager.SetButtonState(inputManager.basicAttackButton, true);
     }
 }
