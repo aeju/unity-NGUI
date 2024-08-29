@@ -8,12 +8,16 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerStats stats;
     public UIButton jumpButton;
+    public UIButton basicAttackButton;
     public UIJoystickHandle joystick;
     public float joystickSensitivity = 500f;
     public float attackTime = 0.5f;
     
     private bool isJumpButtonEnabled = true;
     private BoxCollider jumpButtonCollider;
+    
+    private BoxCollider basicAttackButtonCollider;
+    private bool isBasicAttackButtonEnabled = true;
     
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -47,6 +51,17 @@ public class PlayerController : MonoBehaviour
         else
         {
             Debug.LogError("Jump button is not assigned to the PlayerController!");
+        }
+        
+        if (basicAttackButton != null)
+        {
+            basicAttackButtonCollider = basicAttackButton.GetComponent<BoxCollider>();
+            UIEventListener.Get(basicAttackButton.gameObject).onClick += OnBasicAttackButtonClicked;
+            SetBasicAttackButtonState(true);
+        }
+        else
+        {
+            Debug.LogError("Basic attack button is not assigned to the PlayerController!");
         }
     }
 
@@ -199,6 +214,25 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Attack method called");
             StartCoroutine(PerformAttack());
         }
+    }
+    
+    private void SetBasicAttackButtonState(bool enabled)
+    {
+        if (basicAttackButton != null)
+        {
+            isBasicAttackButtonEnabled = enabled;
+
+            if (basicAttackButtonCollider != null)
+            {
+                basicAttackButtonCollider.enabled = enabled;
+            }
+        }
+    }
+    
+    // 기본 공격 버튼 클릭 이벤트 핸들러 
+    private void OnBasicAttackButtonClicked(GameObject go)
+    {
+        Attack();
     }
     
     // 공격 코루틴

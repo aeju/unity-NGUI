@@ -654,7 +654,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.87068623, g: 0.7429245, b: 0.990566, a: 0}
+  m_BackGroundColor: {r: 0.9811321, g: 0.763617, b: 0.8708428, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3213,9 +3213,9 @@ MonoBehaviour:
   hpLabel: {fileID: 182182517}
   mpSlider: {fileID: 2100626157}
   mpLabel: {fileID: 1590769631}
-  expSlider: {fileID: 0}
-  expLable: {fileID: 0}
-  combatPower: {fileID: 0}
+  expSlider: {fileID: 1661980743}
+  expLable: {fileID: 1853718931}
+  combatPower: {fileID: 1077447416}
 --- !u!1 &333212162
 GameObject:
   m_ObjectHideFlags: 0
@@ -7571,7 +7571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragRadius: 0
-  targetSprite: {fileID: 1988072090}
+  bgSprite: {fileID: 0}
 --- !u!65 &798391701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11726,8 +11726,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 399.99994, y: 399.99994, z: 0}
-  m_Center: {x: -0.000076293945, y: 0.000030517578, z: -1.25}
+  m_Size: {x: 200.00003, y: 199.99998, z: 0}
+  m_Center: {x: 118.99999, y: -99.99999, z: -1.25}
 --- !u!1 &1203425380
 GameObject:
   m_ObjectHideFlags: 0
@@ -15608,7 +15608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragRadius: 0
-  targetSprite: {fileID: 154764709}
+  bgSprite: {fileID: 0}
 --- !u!65 &1551202195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17380,7 +17380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragRadius: 0
-  targetSprite: {fileID: 2108075499}
+  bgSprite: {fileID: 2108075499}
 --- !u!65 &1682076445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19625,6 +19625,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 213020035239118863, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
+      propertyPath: exp
+      value: 30.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 213020035239118863, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1095756996319780706, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
       propertyPath: m_Name
       value: Player
@@ -19689,6 +19697,14 @@ PrefabInstance:
       propertyPath: jumpButton
       value: 
       objectReference: {fileID: 94527109}
+    - target: {fileID: 8710722521867190518, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
+      propertyPath: uiJoystick
+      value: 
+      objectReference: {fileID: 1682076444}
+    - target: {fileID: 8710722521867190518, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
+      propertyPath: basicAttackButton
+      value: 
+      objectReference: {fileID: 1196162062}
     - target: {fileID: 8710722521867190518, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
       propertyPath: joystickSensitivity
       value: 500
