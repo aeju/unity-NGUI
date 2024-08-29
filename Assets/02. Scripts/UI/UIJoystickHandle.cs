@@ -25,7 +25,7 @@ public class UIJoystickHandle : MonoBehaviour
         if (bgSprite != null && handleSprite != null)
         {
             // dragRadius를 handleSprite와 targetSprite의 localScale.x 비율로 설정
-            dragRadius = handleSprite.transform.localScale.x / bgSprite.transform.localScale.x;
+            dragRadius = handleSprite.transform.localScale.x / bgSprite.transform.localScale.x / 2;
             Debug.Log("Handle's scale: " + handleSprite.transform.localScale.x);
             Debug.Log("Target's scale: " + bgSprite.transform.localScale.x);
             Debug.Log("Drag radius set to: " + dragRadius);
