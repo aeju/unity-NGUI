@@ -78,7 +78,11 @@ public class PlayerInputManager : Singleton<PlayerInputManager>
     // 조이스틱으로부터 수평 입력값 얻기 
     public float GetHorizontalInput()
     {
-        return joystick.GetHorizontalValue() * joystickSensitivity;
+        if (joystick != null)
+        {
+            return joystick.GetHorizontalValue() * joystickSensitivity;
+        }
+        return 0f;
     }
 
     // 버튼 클릭 이벤트 핸들러 
