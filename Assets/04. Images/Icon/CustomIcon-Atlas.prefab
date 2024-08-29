@@ -49,13 +49,13 @@ MonoBehaviour:
   - name: white-jump arrow1
     outer:
       serializedVersion: 2
-      x: 1086
+      x: 1501
       y: 1925
       width: 129
       height: 123
     inner:
       serializedVersion: 2
-      x: 1086
+      x: 1501
       y: 1925
       width: 129
       height: 123
@@ -80,6 +80,60 @@ MonoBehaviour:
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: battery-white
+    outer:
+      serializedVersion: 2
+      x: 1086
+      y: 1823
+      width: 409
+      height: 225
+    inner:
+      serializedVersion: 2
+      x: 1086
+      y: 1823
+      width: 409
+      height: 225
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0.40888888
+    paddingBottom: 0.40888888
+  - name: menusetting-white
+    outer:
+      serializedVersion: 2
+      x: 1501
+      y: 1897
+      width: 22
+      height: 22
+    inner:
+      serializedVersion: 2
+      x: 1501
+      y: 1897
+      width: 22
+      height: 22
+    rotated: 0
+    paddingLeft: 0.045454547
+    paddingRight: 0.045454547
+    paddingTop: 0.045454547
+    paddingBottom: 0.045454547
+  - name: batteryThunder-white
+    outer:
+      serializedVersion: 2
+      x: 1086
+      y: 1433
+      width: 226
+      height: 384
+    inner:
+      serializedVersion: 2
+      x: 1086
+      y: 1433
+      width: 226
+      height: 384
+    rotated: 0
+    paddingLeft: 0.34955752
+    paddingRight: 0.34955752
     paddingTop: 0
     paddingBottom: 0
   mCoordinates: 0
