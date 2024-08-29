@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public UIButton basicAttackButton;
     public UIJoystickHandle joystick;
     public float joystickSensitivity = 500f;
-    public float attackTime = 0.5f;
+    public float attackTime = 1f;
     
     private bool isJumpButtonEnabled = true;
     private BoxCollider jumpButtonCollider;
@@ -209,13 +209,14 @@ public class PlayerController : MonoBehaviour
 
     private void Attack()
     {
-        if (!isAttacking)
+        if (!isAttacking && isBasicAttackButtonEnabled)
         {
             Debug.Log("Attack method called");
             StartCoroutine(PerformAttack());
         }
     }
     
+    // 기본 공격 버튼 활성화 상태 설정 
     private void SetBasicAttackButtonState(bool enabled)
     {
         if (basicAttackButton != null)
@@ -239,11 +240,13 @@ public class PlayerController : MonoBehaviour
     private IEnumerator PerformAttack()
     {
         isAttacking = true;
+        SetBasicAttackButtonState(false); // 공격 시작 시 버튼 비활성화
         animator.SetTrigger("Attack");
 
         // 공격 애니메이션 길이만큼 대기
         yield return new WaitForSeconds(attackTime); // 0.5f 
 
         isAttacking = false;
+        SetBasicAttackButtonState(true); // 공격 종료 후 버튼 다시 활성화
     }
 }
