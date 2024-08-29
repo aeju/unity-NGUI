@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandleUI : MonoBehaviour
+public class UIJoystickHandle : MonoBehaviour
 {
     private Vector3 originalPosition;
     private Vector3 offset;
@@ -10,7 +10,7 @@ public class HandleUI : MonoBehaviour
     
     // 0.2 -> 배경 안에서만 드래그 가능 
     public float dragRadius; // handleSprite / targetSprite
-    public UISprite targetSprite;
+    public UISprite bgSprite;
     private UISprite handleSprite;
 
     private int depth;
@@ -22,12 +22,12 @@ public class HandleUI : MonoBehaviour
         handleSprite = GetComponent<UISprite>();
         Debug.Log("handle's radius" + handleSprite.transform.localScale.x);
         
-        if (targetSprite != null && handleSprite != null)
+        if (bgSprite != null && handleSprite != null)
         {
             // dragRadius를 handleSprite와 targetSprite의 localScale.x 비율로 설정
-            dragRadius = handleSprite.transform.localScale.x / targetSprite.transform.localScale.x;
+            dragRadius = handleSprite.transform.localScale.x / bgSprite.transform.localScale.x;
             Debug.Log("Handle's scale: " + handleSprite.transform.localScale.x);
-            Debug.Log("Target's scale: " + targetSprite.transform.localScale.x);
+            Debug.Log("Target's scale: " + bgSprite.transform.localScale.x);
             Debug.Log("Drag radius set to: " + dragRadius);
         }
         else
@@ -55,14 +55,9 @@ public class HandleUI : MonoBehaviour
     void OnDrag(Vector2 delta)
     {
         if (isDragging)
-        {
-            // transform.position = GetMouseWorldPosition() + offset;
-            
+        { 
             Vector3 newPosition = GetMouseWorldPosition() + offset;
             Vector2 dragDelta = new Vector2(newPosition.x - originalPosition.x, newPosition.y - originalPosition.y);
-            
-            // 원형 제한 적용
-            //dragDelta = Vector2.ClampMagnitude(dragDelta, dragRadius);
             
             // dragRadius 이상으로 드래그해도, 핸들 유지 
             if (dragDelta.magnitude > dragRadius)
@@ -88,10 +83,10 @@ public class HandleUI : MonoBehaviour
     // 조이스틱의 현재 값을 얻는 메서드
     public Vector2 GetJoystickValue()
     {
-        if (targetSprite == null) return Vector2.zero;
+        if (bgSprite == null) return Vector2.zero;
 
-        Vector2 diff = transform.position - targetSprite.transform.position;
-        return diff / (targetSprite.transform.localScale.x * dragRadius);
+        Vector2 diff = transform.position - bgSprite.transform.position;
+        return diff / (bgSprite.transform.localScale.x * dragRadius);
     }
 
     // 수평 입력값만 반환하는 메서드

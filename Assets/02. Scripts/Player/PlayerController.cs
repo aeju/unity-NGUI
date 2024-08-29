@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerStats stats;
     public UIButton jumpButton;
-    public HandleUI joystick;
+    public UIJoystickHandle joystick;
     public float joystickSensitivity = 500f;
     public float attackTime = 0.5f;
     
