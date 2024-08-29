@@ -46,6 +46,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 618d7c2c202ae4e70a2d02ce27ddcf2b, type: 2}
   sprites:
+  - name: white-jump arrow1
+    outer:
+      serializedVersion: 2
+      x: 1086
+      y: 1925
+      width: 129
+      height: 123
+    inner:
+      serializedVersion: 2
+      x: 1086
+      y: 1925
+      width: 129
+      height: 123
+    rotated: 0
+    paddingLeft: 0.6976744
+    paddingRight: 0.65891474
+    paddingTop: 0.8130081
+    paddingBottom: 0.9186992
   - name: white-sword1
     outer:
       serializedVersion: 2
