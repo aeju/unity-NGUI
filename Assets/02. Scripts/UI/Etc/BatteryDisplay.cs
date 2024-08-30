@@ -8,6 +8,8 @@ public class BatteryDisplay : MonoBehaviour
     public UISprite chargingSprite;
     
     private BatteryStatus previousStatus;
+    public UISlider batterySlider;
+    public UISprite sliderFillSprite;
     
     void Start()
     {
@@ -21,9 +23,20 @@ public class BatteryDisplay : MonoBehaviour
             Debug.LogError("Battery UISprite is not assigned!");
             return;
         }
+        if (batterySlider == null)
+        {
+            Debug.LogError("Battery UISlider is not assigned!");
+            return;
+        }
+        if (sliderFillSprite == null)
+        {
+            Debug.LogError("Battery UISprite is not assigned!");
+            return;
+        }
         
         // 초기 상태 설정
         UpdateChargingSprite(SystemInfo.batteryStatus == BatteryStatus.Charging);
+        UpdateBatterySlider(SystemInfo.batteryLevel);
 
         StartCoroutine(UpdateBatteryStatus());
     }
@@ -37,6 +50,9 @@ public class BatteryDisplay : MonoBehaviour
 
             batteryLabel.text = string.Format("{0}%", batteryPercentage);
 
+            // 배터리 슬라이더 업데이트
+            UpdateBatterySlider(batteryLevel);
+            
             // 충전 상태 확인
             BatteryStatus currentStatus = SystemInfo.batteryStatus;
             
@@ -73,5 +89,27 @@ public class BatteryDisplay : MonoBehaviour
         }
 
         Debug.Log($"Charging sprite {(isCharging ? "activated" : "deactivated")}");
+    }
+    
+    void UpdateBatterySlider(float batteryLevel)
+    {
+        batterySlider.sliderValue = batteryLevel;
+
+        // 배터리 레벨에 따라 색상 변경
+        Color sliderColor;
+        if (batteryLevel <= 0.2f)
+        {
+            sliderColor = Color.red;
+        }
+        else if (batteryLevel <= 0.4f)
+        {
+            sliderColor = Color.yellow;
+        }
+        else
+        {
+            sliderColor = Color.green;
+        }
+
+        sliderFillSprite.color = sliderColor;
     }
 }
