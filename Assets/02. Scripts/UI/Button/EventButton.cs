@@ -6,7 +6,7 @@ public class EventButton : MonoBehaviour
 {
     public UIButton circleButton;
     
-    // 나중 : 둘 중 하나로
+    // 나중 : 둘 중 하나로 
     public UISprite roundedRectSprite;
     public GameObject pannel;
 
@@ -16,8 +16,8 @@ public class EventButton : MonoBehaviour
         if (roundedRectSprite != null)
         {
             // roundedRectSprite.enabled = false;
-            
-            pannel.SetActive(false);
+            // pannel.SetActive(false);
+            NGUITools.SetActive(pannel, false);
         }
         
         // 버튼 클릭 이벤트 등록
@@ -32,11 +32,13 @@ public class EventButton : MonoBehaviour
         if (roundedRectSprite != null)
         {
             // 스프라이트 활성화
-            roundedRectSprite.enabled = true;
-            pannel.SetActive(true);
+            // roundedRectSprite.enabled = true;
+            // pannel.SetActive(true);
+            NGUITools.SetActive(pannel, true);
             
             // 기존 버튼 비활성화 
-            circleButton.gameObject.SetActive(false);
+            // circleButton.gameObject.SetActive(false);
+            NGUITools.SetActive(circleButton.gameObject, false);
         }
     }
 }
