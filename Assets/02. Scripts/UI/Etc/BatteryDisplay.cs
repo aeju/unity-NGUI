@@ -13,15 +13,6 @@ public class BatteryDisplay : MonoBehaviour
     public UISprite sliderFillSprite;
     private BatterySliderColorStatus batterySliderColorStatus;
     
-    /*
-    public enum BatterySliderColorStatus
-    {
-        low, // ~20 : red
-        medium, // ~40 : yellow
-        high // ~100 : green 
-    }
-    */
-    
     void Start()
     {
         if (batteryLabel == null)
