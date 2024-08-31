@@ -1,14 +1,9 @@
-//----------------------------------------------
-//            NGUI: Next-Gen UI kit
-// Copyright © 2011-2013 Tasharen Entertainment
-//----------------------------------------------
-
 using UnityEngine;
 using System.Collections.Generic;
 
 /// <summary>
-/// All children added to the game object with this script will be repositioned to be on a grid of specified dimensions.
-/// If you want the cells to automatically set their scale based on the dimensions of their content, take a look at UITable.
+/// 기존 그리드 : 왼쪽 정렬
+/// 오른쪽 기준 정렬 ! 
 /// </summary>
 
 [ExecuteInEditMode]
@@ -30,7 +25,7 @@ public class UIGridTest : MonoBehaviour
 	public bool hideInactive = true; // 비활성화된 오브젝트 숨김 여부 (true!)
 
 	bool mStarted = false;
-
+	
 	void Start ()
 	{
 		mStarted = true;
@@ -62,9 +57,29 @@ public class UIGridTest : MonoBehaviour
 
 		Transform myTrans = transform;
 
+		// x, y 0으로 초기화 -> 왼쪽에서 오른쪽으로 추가 (첫번째 자식 좌표 저장)
 		int x = 0;
 		int y = 0;
+		
+		// 총 너비 계산
+		float totalWidth = (maxPerLine > 0) ? cellWidth * maxPerLine : cellWidth * myTrans.childCount;
+		
+		// 활성화된 자식 오브젝트 수 계산
+		int activeChildCount = 0;
+		for (int i = 0; i < myTrans.childCount; ++i)
+		{
+			if (!hideInactive || NGUITools.GetActive(myTrans.GetChild(i).gameObject))
+			{
+				activeChildCount++;
+			}
+		}
+		
+		// 현재 줄의 아이템 수
+		int itemsInCurrentLine = (maxPerLine > 0) ? Mathf.Min(maxPerLine, activeChildCount) : activeChildCount;
 
+		// 시작 x 위치 계산
+		int startX = (int)totalWidth - (int)(itemsInCurrentLine * cellWidth);
+		
 		// 정렬이 필요한 경우
 		if (sorted)
 		{
@@ -87,13 +102,17 @@ public class UIGridTest : MonoBehaviour
 
 				float depth = t.localPosition.z;
 				t.localPosition = (arrangement == Arrangement.Horizontal) ?
-					new Vector3(cellWidth * x, -cellHeight * y, depth) :
+					//new Vector3(cellWidth * x, -cellHeight * y, depth) :
+					new Vector3(startX + cellWidth * x, -cellHeight * y, depth) :
+					
 					new Vector3(cellWidth * y, -cellHeight * x, depth);
 
 				if (++x >= maxPerLine && maxPerLine > 0)
 				{
 					x = 0;
 					++y;
+					itemsInCurrentLine = (maxPerLine > 0) ? Mathf.Min(maxPerLine, imax - i - 1) : imax - i - 1;
+					startX = (int)totalWidth - (int)(itemsInCurrentLine * cellWidth);
 				}
 			}
 		}
@@ -113,14 +132,19 @@ public class UIGridTest : MonoBehaviour
 				// 위치 설정 
 				t.localPosition = (arrangement == Arrangement.Horizontal) ?
 					// Horizontal : (cellWidth * x, -cellHeight * y)
-					new Vector3(cellWidth * x, -cellHeight * y, depth) :
+					new Vector3(startX + cellWidth * x, -cellHeight * y, depth) :
+					
 					// Vertical : (cellWidth * y, -cellHeight * x) 
 					new Vector3(cellWidth * y, -cellHeight * x, depth);
 
+				// 다음 줄로 이동
 				if (++x >= maxPerLine && maxPerLine > 0)
 				{
-					x = 0;
-					++y;
+					x = 0; // x값 초기화
+					// x = (int)totalWidth - (int)(itemsInCurrentLine * cellWidth);
+					++y; 
+					//itemsInCurrentLine = (maxPerLine > 0) ? Mathf.Min(maxPerLine, myTrans.childCount - i - 1) : myTrans.childCount - i - 1;
+					startX = (int)totalWidth - (int)(itemsInCurrentLine * cellWidth);
 				}
 			}
 		}
