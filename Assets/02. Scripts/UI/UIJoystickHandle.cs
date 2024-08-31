@@ -49,6 +49,12 @@ public class UIJoystickHandle : MonoBehaviour
             // 드래그 종료
             isDragging = false;
             transform.position = originalPosition;
+            
+            Vector3 offset = transform.position - originalPosition;
+            if (offset.magnitude > 0.05f) // 작은 오차 무시
+            {
+                transform.position = originalPosition;
+            }
         }
     }
 
