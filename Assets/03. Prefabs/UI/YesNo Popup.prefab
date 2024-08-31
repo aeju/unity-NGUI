@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387fc79c24b124d28b350c82d14261fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleLabel: {fileID: 16658460163229087}
+  TitleLabel: {fileID: 16658460163229087}
   messageLabel: {fileID: 3178740733075725583}
   yesButton: {fileID: 130981541499570834}
   noButton: {fileID: 2169565015263142928}

@@ -84,6 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433348790987203983}
   - component: {fileID: 9020345857132599613}
+  - component: {fileID: 3471395184533967483}
   m_Layer: 8
   m_Name: Full Size Popup
   m_TagString: Untagged
@@ -129,17 +130,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 540.5405
+    e00: 1
     e01: 0
     e02: 0
     e03: 0
     e10: 0
-    e11: 540.5405
+    e11: 1
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 540.5405
+    e22: 1
     e23: 8
     e30: 0
     e31: 0
@@ -150,6 +151,20 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
+--- !u!114 &3471395184533967483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760028401534669505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eeea73c60d30483d918dd9ec9c83f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TitleLabel: {fileID: 1841625490046907625}
+  CloseButton: {fileID: 4825347508575298498}
 --- !u!1 &4359036280596981948
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,8 +176,10 @@ GameObject:
   - component: {fileID: 1376558304507519583}
   - component: {fileID: 6897972532334937659}
   - component: {fileID: 6577376021115982729}
+  - component: {fileID: 4825347508575298498}
+  - component: {fileID: 7322646707157496941}
   m_Layer: 8
-  m_Name: Sprite (X)
+  m_Name: X Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +194,7 @@ Transform:
   m_GameObject: {fileID: 4359036280596981948}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 874.00006, y: 392, z: 0}
+  m_LocalPosition: {x: 874, y: 392, z: 0}
   m_LocalScale: {x: 80, y: 80, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -225,6 +242,44 @@ MonoBehaviour:
   runOnlyOnce: 0
   relativeOffset: {x: -0.05, y: -0.07}
   pixelOffset: {x: 0, y: 0}
+--- !u!114 &4825347508575298498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359036280596981948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenTarget: {fileID: 0}
+  hover: {r: 1, g: 1, b: 1, a: 1}
+  pressed: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  duration: 0.2
+  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+--- !u!65 &7322646707157496941
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359036280596981948}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0}
+  m_Center: {x: -0.000000059604645, y: 0, z: -3.5}
 --- !u!1 &6080589445900729276
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,8 +381,8 @@ Transform:
   m_GameObject: {fileID: 8557771730327910391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -758, y: 428, z: 0.000025749207}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalPosition: {x: -701, y: 428, z: 0.000025749207}
+  m_LocalScale: {x: 90, y: 90, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1433348790987203983}
@@ -380,5 +435,5 @@ MonoBehaviour:
   side: 2
   halfPixelOffset: 1
   runOnlyOnce: 0
-  relativeOffset: {x: 0.1, y: -0.03}
+  relativeOffset: {x: 0.13, y: -0.03}
   pixelOffset: {x: 0, y: 0}
