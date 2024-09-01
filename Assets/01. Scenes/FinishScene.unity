@@ -16448,7 +16448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 0}
-  hover: {x: 1.1, y: 1.1, z: 1.1}
+  hover: {x: 1, y: 1, z: 1}
   pressed: {x: 1.05, y: 1.05, z: 1.05}
   duration: 0.2
 --- !u!114 &883458829
@@ -18641,7 +18641,7 @@ GameObject:
   - component: {fileID: 1041623097}
   - component: {fileID: 1041623098}
   m_Layer: 8
-  m_Name: Tooltip Background
+  m_Name: 2-1. Tooltip Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37806,7 +37806,7 @@ GameObject:
   - component: {fileID: 2097098776}
   - component: {fileID: 2097098777}
   m_Layer: 8
-  m_Name: Tooltip Label
+  m_Name: 2-1. Tooltip Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
