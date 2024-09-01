@@ -22,7 +22,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isJumping = false;
     [SerializeField] private bool isAttacking = false;
 
+    [Header("# 플레이어 효과음")]
     [SerializeField] private string jumpSoundName = "Jump";
+    [SerializeField] private string attackSoundName = "Attack"; 
     
     private void Awake() // 컴포넌트 초기화 
     {
@@ -164,7 +166,6 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
             isJumping = false; 
-            // SetJumpButtonState(true); // 점프 버튼 활성화 
             PlayerInputManager.Instance.SetButtonState(PlayerInputManager.Instance.jumpButton, true);
             animator.SetBool("IsJumping", false); // 점프 애니메이션 종료
         }
@@ -183,15 +184,14 @@ public class PlayerController : MonoBehaviour
     private IEnumerator PerformAttack()
     {
         isAttacking = true;
-        // SetBasicAttackButtonState(false); // 공격 시작 시 버튼 비활성화
         PlayerInputManager.Instance.SetButtonState(PlayerInputManager.Instance.basicAttackButton, false);
         animator.SetTrigger("Attack");
+        SoundManager.Instance.PlaySFX(attackSoundName);
 
         // 공격 애니메이션 길이만큼 대기
         yield return new WaitForSeconds(attackTime); // 0.5f 
 
         isAttacking = false;
-        // SetBasicAttackButtonState(true); // 공격 종료 후 버튼 다시 활성화
         PlayerInputManager.Instance.SetButtonState(PlayerInputManager.Instance.basicAttackButton, true);
     }
     
