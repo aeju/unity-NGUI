@@ -5,24 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/01. Scenes/Basic/FirstScene.unity
-    guid: e72a46e72eea94ce081608940a59f6d0
-  - enabled: 0
-    path: Assets/01. Scenes/Joystick/JoyStickScene.unity
-    guid: 13db8388b081144b7adecce44d4299ef
-  - enabled: 0
-    path: Assets/01. Scenes/MainScene.unity
-    guid: cbfb18823b6264cf3a26ed9e5154a589
-  - enabled: 0
-    path: Assets/01. Scenes/Joystick/JoysStickMoveScene.unity
-    guid: 35e998ec229f6450c851e88e1fadb5c8
-  - enabled: 0
-    path: Assets/01. Scenes/UIScene.unity
-    guid: 9f8c0abd379574fc7b9fbbd27fe0f640
-  - enabled: 0
-    path: Assets/01. Scenes/PopupScene.unity
-    guid: 7ec8903d14fd54d1e83decb23042048f
   - enabled: 1
     path: Assets/01. Scenes/FinishScene.unity
     guid: 9e0fad22da01e488bbeef7005e36eda9

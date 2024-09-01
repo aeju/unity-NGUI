@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField] private PopupManager popupManager;
+    // [SerializeField] private PopupManager popupManager;
 
     private void Update()
     {
@@ -23,15 +23,15 @@ public class GameManager : Singleton<GameManager>
         }
         else
         {
-            popupManager.CloseTopPopup();
+            PopupManager.Instance.CloseTopPopup();
         }
     }
 
     private void ShowExitConfirmationPopup()
     {
-        popupManager.ShowYesNoPopup("게임 종료", "정말로 게임을 종료하시겠습니까?", 
+        PopupManager.Instance.ShowYesNoPopup("게임 종료", "정말로 게임을 종료하시겠습니까?", 
             () => Application.Quit(), 
-            () => { /* 취소 시 아무 동작 없음 */ });
+            () => PopupManager.Instance.CloseTopPopup());
     }
 
 }
