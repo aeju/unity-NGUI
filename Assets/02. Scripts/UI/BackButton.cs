@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BackButton : MonoBehaviour
 {
+    /*
     // public GameObject popupPrefab; // NGUI 팝업 프리팹
     public YesNoPopup popupPrefab; // NGUI 팝업 프리팹
     //private YesNoPopup currentPopup; // 현재 표시된 팝업을 추적
     private IPopup currentPopup; // 현재 표시된 팝업을 추적
+    // popup 스택 싱글톤에서 가져와서, 제일 상단 팝업 꺼주기 
     
     void Update()
     {
@@ -16,7 +18,10 @@ public class BackButton : MonoBehaviour
         {
             Debug.Log("Escape Key!");
             // 팝업 켜져있는데, 뒤로가기 -> 창닫기 
-            if (currentPopup != null && currentPopup.IsVisible)
+            // if (currentPopup != null && currentPopup.IsVisible)
+            
+            // 수정 필요! stack으로 관리? 
+            if (currentPopup != null)
             {
                 HidePopup();
             }
@@ -101,4 +106,5 @@ public class BackButton : MonoBehaviour
             currentPopup = null;
         }
     }
+    */
 }

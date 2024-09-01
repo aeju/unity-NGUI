@@ -49,13 +49,13 @@ MonoBehaviour:
   - name: white-jump arrow1
     outer:
       serializedVersion: 2
-      x: 1501
+      x: 1906
       y: 1925
       width: 129
       height: 123
     inner:
       serializedVersion: 2
-      x: 1501
+      x: 1906
       y: 1925
       width: 129
       height: 123
@@ -86,13 +86,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 1086
-      y: 1823
+      y: 1132
       width: 409
       height: 225
     inner:
       serializedVersion: 2
       x: 1086
-      y: 1823
+      y: 1132
       width: 409
       height: 225
     rotated: 0
@@ -103,13 +103,13 @@ MonoBehaviour:
   - name: menusetting-white
     outer:
       serializedVersion: 2
-      x: 1501
+      x: 1906
       y: 1897
       width: 22
       height: 22
     inner:
       serializedVersion: 2
-      x: 1501
+      x: 1906
       y: 1897
       width: 22
       height: 22
@@ -121,14 +121,14 @@ MonoBehaviour:
   - name: batteryThunder-white
     outer:
       serializedVersion: 2
-      x: 1086
-      y: 1433
+      x: 1674
+      y: 1664
       width: 226
       height: 384
     inner:
       serializedVersion: 2
-      x: 1086
-      y: 1433
+      x: 1674
+      y: 1664
       width: 226
       height: 384
     rotated: 0
@@ -136,6 +136,60 @@ MonoBehaviour:
     paddingRight: 0.34955752
     paddingTop: 0
     paddingBottom: 0
+  - name: menu white
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 455
+      width: 509
+      height: 507
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 455
+      width: 509
+      height: 507
+    rotated: 0
+    paddingLeft: 0.025540275
+    paddingRight: 0.035363458
+    paddingTop: 0.031558186
+    paddingBottom: 0.03353057
+  - name: circle-white
+    outer:
+      serializedVersion: 2
+      x: 1674
+      y: 1402
+      width: 255
+      height: 256
+    inner:
+      serializedVersion: 2
+      x: 1674
+      y: 1402
+      width: 255
+      height: 256
+    rotated: 0
+    paddingLeft: 0.003921569
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: backpack-white
+    outer:
+      serializedVersion: 2
+      x: 1086
+      y: 1363
+      width: 582
+      height: 685
+    inner:
+      serializedVersion: 2
+      x: 1086
+      y: 1363
+      width: 582
+      height: 685
+    rotated: 0
+    paddingLeft: 0.087628864
+    paddingRight: 0.04982818
+    paddingTop: 0.27445257
+    paddingBottom: 0.30218977
   mCoordinates: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}

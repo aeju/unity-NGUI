@@ -1,23 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class EventButton : MonoBehaviour
 {
     public UIButton circleButton;
     
-    // 나중 : 둘 중 하나로 
-    public UISprite roundedRectSprite;
-    public GameObject pannel;
+    public UIButton closeButton;
+    public GameObject panel;
 
     void Start()
     {
         // 초기 상태 설정
-        if (roundedRectSprite != null)
+        if (panel != null)
         {
-            // roundedRectSprite.enabled = false;
-            // pannel.SetActive(false);
-            NGUITools.SetActive(pannel, false);
+            NGUITools.SetActive(panel, false);
         }
         
         // 버튼 클릭 이벤트 등록
@@ -25,20 +23,74 @@ public class EventButton : MonoBehaviour
         {
             UIEventListener.Get(circleButton.gameObject).onClick += OnCircleButtonClick;
         }
+        
+        if (closeButton != null)
+        {
+            UIEventListener.Get(closeButton.gameObject).onClick += OnCloseButtonClick;
+        }
+    }
+    
+    // 처음 : 패널 비활성화 
+    void InitializePanel()
+    {
+        if (panel != null)
+        {
+            NGUITools.SetActive(circleButton.gameObject, true);
+            NGUITools.SetActive(panel, false);
+        }
+        else
+        {
+            Debug.LogWarning("Panel is not assigned in the inspector.");
+        }
+    }
+    
+    // 버튼 클릭 이벤트 리스너를 설정
+    void SetupButtonListeners()
+    {
+        if (circleButton != null)
+        {
+            UIEventListener.Get(circleButton.gameObject).onClick += OnCircleButtonClick;
+        }
+        else
+        {
+            Debug.LogWarning("Circle button is not assigned in the inspector.");
+        }
+        
+        if (closeButton != null)
+        {
+            UIEventListener.Get(closeButton.gameObject).onClick += OnCloseButtonClick;
+        }
+        else
+        {
+            Debug.LogWarning("Close button is not assigned in the inspector.");
+        }
     }
     
     void OnCircleButtonClick(GameObject go)
     {
-        if (roundedRectSprite != null)
+        if (panel != null && circleButton != null)
         {
-            // 스프라이트 활성화
-            // roundedRectSprite.enabled = true;
-            // pannel.SetActive(true);
-            NGUITools.SetActive(pannel, true);
-            
+            // 패널 활성화
+            NGUITools.SetActive(panel, true);
             // 기존 버튼 비활성화 
-            // circleButton.gameObject.SetActive(false);
             NGUITools.SetActive(circleButton.gameObject, false);
+        }
+        else
+        {
+            Debug.LogError("Panel or circle button is missing. Cannot perform OnCircleButtonClick action.");
+        }
+    }
+    
+    void OnCloseButtonClick(GameObject go)
+    {
+        if (panel != null && circleButton != null)
+        {
+            panel.SetActive(false); // 패널 비활성화 
+            NGUITools.SetActive(circleButton.gameObject, true); // 버튼 활성화
+        }
+        else
+        {
+            Debug.LogError("Panel or circle button is missing. Cannot perform OnCloseButtonClick action.");
         }
     }
 }

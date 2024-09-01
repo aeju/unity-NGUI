@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BasicButtonPopup : MonoBehaviour
 {
+    public GameObject popupPanel;
     public UIButton button; // Inspector에서 할당할 NGUI 버튼
     public GameObject popupPrefab; // Inspector에서 할당할 팝업 패널
     private GameObject currentPopup; // 현재 생성된 팝업 인스턴스
@@ -32,7 +33,7 @@ public class BasicButtonPopup : MonoBehaviour
             // 팝업 인스턴스화
             if (currentPopup == null)
             {
-                currentPopup = NGUITools.AddChild(gameObject, popupPrefab);
+                currentPopup = NGUITools.AddChild(popupPanel, popupPrefab);
             }
             else
             {

@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TitleLabel: {fileID: 930624961248856701}
+  canCloseWithEsc: 0
   duration: 1
 --- !u!1 &5937849888967815208
 GameObject:

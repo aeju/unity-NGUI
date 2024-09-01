@@ -73,10 +73,10 @@ MonoBehaviour:
       height: 79
     inner:
       serializedVersion: 2
-      x: 126
-      y: 293
-      width: 91
-      height: 79
+      x: 136
+      y: 303
+      width: 71
+      height: 59
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
@@ -110,9 +110,9 @@ MonoBehaviour:
     inner:
       serializedVersion: 2
       x: 50
-      y: 324
+      y: 334
       width: 20
-      height: 138
+      height: 128
     rotated: 0
     paddingLeft: 0
     paddingRight: 0

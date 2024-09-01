@@ -74,7 +74,7 @@ public class BatteryDisplay : MonoBehaviour
             }
 
             // 충전 상태 로그 출력
-            Debug.Log($"Battery Status: {currentChargingStatus}, Battery Level: {batteryPercentage}%");
+            // Debug.Log($"Battery Status: {currentChargingStatus}, Battery Level: {batteryPercentage}%");
             
             yield return new WaitForSeconds(1f); // 1초마다 업데이트
         }
@@ -107,7 +107,7 @@ public class BatteryDisplay : MonoBehaviour
         // 슬라이더 색상 업데이트 
         sliderFillSprite.color = sliderColor;
 
-        Debug.Log($"Battery slider updated: Level {batteryLevel}, Color Status {colorStatus}");
+        // Debug.Log($"Battery slider updated: Level {batteryLevel}, Color Status {colorStatus}");
     }
     
     // 배터리 레벨 - 색상 상태  

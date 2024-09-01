@@ -19,4 +19,19 @@ public class PlayerStats : MonoBehaviour
 
     public int level = 1;
     public float exp = 0;
+    
+    public event System.Action<int, int> OnHealthChanged;
+    public event System.Action<int, int> OnManaChanged;
+    
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+    }
+
+    public void UseMana(int amount)
+    {
+        currentMana -= amount;
+        OnManaChanged?.Invoke(currentMana, maxMana);
+    }
 }

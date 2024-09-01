@@ -61,6 +61,7 @@ public class PopupManager : Singleton<PopupManager>
                 isFullSizePopupOpen = false;
             }
             
+            Debug.Log("Destroy");
             Destroy(topPopup);
         }
     }

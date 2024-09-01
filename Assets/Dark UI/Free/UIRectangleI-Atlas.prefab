@@ -235,9 +235,9 @@ MonoBehaviour:
       height: 513
     inner:
       serializedVersion: 2
-      x: 1042
+      x: 1043
       y: 494
-      width: 512
+      width: 510
       height: 513
     rotated: 0
     paddingLeft: 0
