@@ -5236,6 +5236,81 @@ MonoBehaviour:
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
+--- !u!1 &313032674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 313032675}
+  - component: {fileID: 313032677}
+  - component: {fileID: 313032676}
+  m_Layer: 5
+  m_Name: Screen Shot (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &313032675
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313032674}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 7.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2078661221}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &313032676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313032674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 94d3e5a4fcc05459790680750110a9c6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &313032677
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313032674}
+  m_CullTransparentMesh: 1
 --- !u!1 &317132219
 GameObject:
   m_ObjectHideFlags: 0
@@ -7163,7 +7238,7 @@ GameObject:
   - component: {fileID: 405440856}
   m_Layer: 8
   m_Name: 'Menu Button  '
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8841,7 +8916,7 @@ GameObject:
   - component: {fileID: 561807930}
   m_Layer: 8
   m_Name: Button  (3)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8875,7 +8950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -11867,7 +11942,7 @@ GameObject:
   - component: {fileID: 650554481}
   m_Layer: 8
   m_Name: Button  (6)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11901,7 +11976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -12573,7 +12648,7 @@ GameObject:
   - component: {fileID: 672711642}
   m_Layer: 8
   m_Name: Button  (7)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12607,7 +12682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -16380,7 +16455,7 @@ GameObject:
   - component: {fileID: 883458832}
   m_Layer: 8
   m_Name: 2. Tooltip Trigger Button
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16415,7 +16490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 20f1b0aa6f60b49db8d9e0c43e57074d, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -16638,7 +16713,7 @@ GameObject:
   - component: {fileID: 894424851}
   m_Layer: 8
   m_Name: Button  (4)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16672,7 +16747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -16915,7 +16990,7 @@ GameObject:
   - component: {fileID: 913668206}
   m_Layer: 8
   m_Name: '1. Event Button '
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16950,7 +17025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 20f1b0aa6f60b49db8d9e0c43e57074d, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -17454,7 +17529,7 @@ GameObject:
   - component: {fileID: 949310844}
   m_Layer: 8
   m_Name: Setting Button  (1)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17487,7 +17562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -18018,7 +18093,7 @@ GameObject:
   - component: {fileID: 985694900}
   m_Layer: 8
   m_Name: Button  (1)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18067,7 +18142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -19127,7 +19202,7 @@ GameObject:
   - component: {fileID: 1055790529}
   m_Layer: 8
   m_Name: Inventory
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19160,7 +19235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -20539,7 +20614,7 @@ Transform:
   m_GameObject: {fileID: 1152708834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -960, y: 540, z: 0}
+  m_LocalPosition: {x: -960, y: 540, z: 0.99997044}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20962,7 +21037,7 @@ GameObject:
   - component: {fileID: 1177943893}
   m_Layer: 8
   m_Name: Button  (5)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20996,7 +21071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -21936,6 +22011,7 @@ GameObject:
   - component: {fileID: 1214020966}
   - component: {fileID: 1214020967}
   - component: {fileID: 1214020968}
+  - component: {fileID: 1214020969}
   m_Layer: 8
   m_Name: Arrow - Close Button
   m_TagString: Untagged
@@ -22018,6 +22094,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 2, z: 0}
   m_Center: {x: -0.0000014305115, y: 0.00000032782555, z: -1}
+--- !u!114 &1214020969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214020964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 20f1b0aa6f60b49db8d9e0c43e57074d, type: 3}
+  trigger: 0
+  volume: 1
+  pitch: 1
 --- !u!1 &1218247207
 GameObject:
   m_ObjectHideFlags: 0
@@ -22792,7 +22884,7 @@ MonoBehaviour:
     e20: 0
     e21: 0
     e22: 540
-    e23: 0
+    e23: -0.99997044
     e30: 0
     e31: 0
     e32: 0
@@ -22867,7 +22959,7 @@ MonoBehaviour:
     e20: 0
     e21: 0
     e22: 540
-    e23: 0
+    e23: -0.99997044
     e30: 0
     e31: 0
     e32: 0
@@ -23872,7 +23964,7 @@ GameObject:
   - component: {fileID: 1319330553}
   m_Layer: 8
   m_Name: 'Noti Button  '
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23905,7 +23997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -24349,7 +24441,7 @@ GameObject:
   - component: {fileID: 1326702826}
   m_Layer: 8
   m_Name: Button  (9)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24383,7 +24475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -26148,7 +26240,7 @@ GameObject:
   - component: {fileID: 1448508595}
   m_Layer: 8
   m_Name: Button  (8)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26182,7 +26274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -36630,7 +36722,7 @@ GameObject:
   - component: {fileID: 2035468831}
   m_Layer: 8
   m_Name: Button  (2)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36664,7 +36756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9a976d04b1d45457ebaad3745190a2a6, type: 3}
   trigger: 0
   volume: 1
   pitch: 1
@@ -37484,7 +37576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2078661218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37563,6 +37655,7 @@ RectTransform:
   - {fileID: 546202718}
   - {fileID: 913616120}
   - {fileID: 993452863}
+  - {fileID: 313032675}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -38306,6 +38399,8 @@ MonoBehaviour:
   - name: Jump
     clip: {fileID: 8300000, guid: 9724cb3de106740bcb57f4b9452d601d, type: 3}
   - name: Attack
+    clip: {fileID: 8300000, guid: ad073e6389148420aaa0a54936731596, type: 3}
+  - name: MenuBtn
     clip: {fileID: 8300000, guid: ad073e6389148420aaa0a54936731596, type: 3}
 --- !u!1 &2113019796
 GameObject:
