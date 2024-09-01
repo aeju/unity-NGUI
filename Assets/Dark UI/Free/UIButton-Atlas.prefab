@@ -163,10 +163,10 @@ MonoBehaviour:
       height: 129
     inner:
       serializedVersion: 2
-      x: 518
-      y: 619
-      width: 386
-      height: 129
+      x: 543
+      y: 647
+      width: 336
+      height: 73
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
@@ -217,9 +217,9 @@ MonoBehaviour:
       height: 129
     inner:
       serializedVersion: 2
-      x: 0
+      x: 50
       y: 484
-      width: 512
+      width: 362
       height: 129
     rotated: 0
     paddingLeft: 0
