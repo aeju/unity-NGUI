@@ -14,16 +14,14 @@ public class FullSizePopup : PopupBase
         
         if (CloseButton == null)
         {
-            Debug.LogError("CloseButton is null. Make sure it exists in the prefab.");
+            Debug.LogError("CloseButton is null.");
         }
         else
         {
-            Debug.Log("CloseButton found. Attaching onClick listener.");
+            // 닫기 버튼
+            CloseButton.isEnabled = true;
             UIEventListener.Get(CloseButton.gameObject).onClick = OnCloseButtonClick;
         }
-        
-        // 닫기 버튼 
-        //UIEventListener.Get(CloseButton.gameObject).onClick = OnCloseButtonClick;
     }
 
     public override void Show(string title)
@@ -33,7 +31,6 @@ public class FullSizePopup : PopupBase
 
     public override void Hide()
     {
-        Debug.Log("CloseButton clicked!");
         PopupManager.Instance.CloseTopPopup();
     }
     

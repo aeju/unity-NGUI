@@ -51,18 +51,32 @@ public class PopupManager : Singleton<PopupManager>
 
     public void CloseTopPopup()
     {
+        Debug.Log("CloseTopPopup called. Current stack count: " + popupStack.Count);
         if (popupStack.Count > 0)
         {
-            GameObject topPopup = popupStack.Pop();
+            // GameObject topPopup = popupStack.Pop();
+            GameObject topPopup = popupStack.Peek(); // Pop 대신 Peek를 사용하여 로깅
+            Debug.Log("Top popup type: " + topPopup.GetType().Name);
             
             // FullSizePopup이 닫힐 때 플래그를 false로 설정
             if (topPopup.GetComponent<FullSizePopup>() != null)
             {
+                Debug.Log("Closing FullSizePopup. isFullSizePopupOpen before: " + isFullSizePopupOpen);
                 isFullSizePopupOpen = false;
+                Debug.Log("isFullSizePopupOpen after: " + isFullSizePopupOpen);
+                //isFullSizePopupOpen = false;
             }
             
-            Debug.Log("Destroy");
+            //Debug.Log("Destroy");
+            //Destroy(topPopup);
+            popupStack.Pop(); // 실제로 팝업 제거
+            Debug.Log("Destroying popup: " + topPopup.name);
             Destroy(topPopup);
+            Debug.Log("Popup destroyed. New stack count: " + popupStack.Count);
+        }
+        else
+        {
+            Debug.LogWarning("Attempted to close popup, but stack is empty.");
         }
     }
 }
