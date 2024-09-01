@@ -45,12 +45,11 @@ public class TooltipTrigger : MonoBehaviour
         {
             if (tooltip.background != null)
             {
-                // 스프라이트의 알파값을 1로 설정
-                SetSpriteAlpha(tooltip.background, 1f);
+                NGUITools.SetActive(tooltip.background.gameObject, true);
             }
             if (tooltip.text != null)
             {
-                tooltip.text.gameObject.SetActive(true);
+                NGUITools.SetActive(tooltip.text.gameObject, true);
             }
             isTooltipVisible = true;
         }
@@ -62,22 +61,14 @@ public class TooltipTrigger : MonoBehaviour
         {
             if (tooltip.background != null)
             {
-                // 스프라이트의 알파값을 0으로 설정
-                SetSpriteAlpha(tooltip.background, 0f);
+                NGUITools.SetActive(tooltip.background.gameObject, false);
             }
             if (tooltip.text != null)
             {
-                tooltip.text.gameObject.SetActive(false);
+                NGUITools.SetActive(tooltip.text.gameObject, false);
             }
             isTooltipVisible = false;
         }
-    }
-
-    void SetSpriteAlpha(UISprite sprite, float alpha)
-    {
-        Color color = sprite.color;
-        color.a = alpha;
-        sprite.color = color;
     }
 
     void OnDisable()
