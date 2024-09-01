@@ -24,7 +24,8 @@ public class UIStatsDisplay : MonoBehaviour
         
         if (hpLabel != null)
         {
-            hpLabel.text = currentHealth.ToString();
+            // hpLabel.text = currentHealth.ToString();
+            hpLabel.ToStringFormattedNumber(currentHealth);
         }
     }
     
@@ -37,7 +38,8 @@ public class UIStatsDisplay : MonoBehaviour
         
         if (mpLabel != null)
         {
-            mpLabel.text = currentMana.ToString();
+            // mpLabel.text = currentMana.ToString();
+            mpLabel.ToStringFormattedNumber(currentMana);
         }
     }
 }

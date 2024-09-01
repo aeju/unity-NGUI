@@ -36334,6 +36334,22 @@ PrefabInstance:
       propertyPath: level
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 213020035239118863, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
+      propertyPath: maxMana
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 213020035239118863, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
+      propertyPath: maxHealth
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 213020035239118863, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
+      propertyPath: currentMana
+      value: 1111
+      objectReference: {fileID: 0}
+    - target: {fileID: 213020035239118863, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
+      propertyPath: currentHealth
+      value: 1123
+      objectReference: {fileID: 0}
     - target: {fileID: 1095756996319780706, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
       propertyPath: m_Name
       value: Player
