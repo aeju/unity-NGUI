@@ -71,11 +71,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweenTarget: {fileID: 8157801699681544942}
-  hover: {r: 0.6, g: 1, b: 0.2, a: 1}
-  pressed: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  tweenTarget: {fileID: 0}
+  hover: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
+  pressed: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
   duration: 0.2
-  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  disabledColor: {r: 1, g: 0.49803922, b: 0, a: 1}
 --- !u!114 &4435760417408534583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,10 +353,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 7943657069706545956}
-  hover: {r: 0.6, g: 1, b: 0.2, a: 1}
-  pressed: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  hover: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
+  pressed: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
   duration: 0.2
-  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  disabledColor: {r: 1, g: 0.49678105, b: 0, a: 1}
 --- !u!114 &990853376444951533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,17 +471,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 540
+    e00: 1
     e01: 0
     e02: 0
     e03: 0
     e10: 0
-    e11: 540
+    e11: 1
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 540
+    e22: 1
     e23: 8
     e30: 0
     e31: 0
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 1, g: 0.9911611, b: 0.5254902, a: 1}
+  mColor: {r: 1, g: 0.7741269, b: 0, a: 1}
   mPivot: 4
   mDepth: 11
   mAtlas: {fileID: 8005909330716535128, guid: 8d5dc7ec967e343b88004b0a4cb5b447, type: 3}
@@ -631,7 +631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4753456401025044096
 Transform:
   m_ObjectHideFlags: 0
@@ -741,10 +741,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 7706074444521093205}
-  hover: {r: 0.6, g: 1, b: 0.2, a: 1}
-  pressed: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  hover: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
+  pressed: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
   duration: 0.2
-  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  disabledColor: {r: 1, g: 0.49803922, b: 0, a: 1}
 --- !u!114 &1230215435236724101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,17 +849,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 540
+    e00: 1
     e01: 0
     e02: 0
     e03: 349
     e10: 0
-    e11: 540
+    e11: 1
     e12: 0
     e13: 80
     e20: 0
     e21: 0
-    e22: 540
+    e22: 1
     e23: 8
     e30: 0
     e31: 0
@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 0.5254902, g: 0.78047174, b: 1, a: 1}
+  mColor: {r: 0.5408633, g: 0.5254902, b: 1, a: 1}
   mPivot: 4
   mDepth: 11
   mAtlas: {fileID: 8005909330716535128, guid: 8d5dc7ec967e343b88004b0a4cb5b447, type: 3}
@@ -1355,17 +1355,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 540
+    e00: 1
     e01: 0
     e02: 0
     e03: 349
     e10: 0
-    e11: 540
+    e11: 1
     e12: 0
     e13: 80
     e20: 0
     e21: 0
-    e22: 540
+    e22: 1
     e23: 8
     e30: 0
     e31: 0
@@ -1405,6 +1405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8386705154870205954}
   - component: {fileID: 6405346839631036453}
+  - component: {fileID: 5525378339087233342}
   m_Layer: 8
   m_Name: Label
   m_TagString: Untagged
@@ -1421,7 +1422,7 @@ Transform:
   m_GameObject: {fileID: 4794560524744688846}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -83, y: 35, z: 0}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1440,10 +1441,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
-  mPivot: 0
+  mPivot: 4
   mDepth: 16
   mFont: {fileID: 3936954928667575084, guid: f5577163386ef44d69e6445630f7d42c, type: 3}
-  mText: Button
+  mText: Tab 1
   mMaxLineWidth: 0
   mMaxLineHeight: 0
   mEncoding: 1
@@ -1457,6 +1458,26 @@ MonoBehaviour:
   mShrinkToFit: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &5525378339087233342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4794560524744688846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8077b76001d36d489868d20d28bddb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCamera: {fileID: 0}
+  widgetContainer: {fileID: 274310293986582159}
+  panelContainer: {fileID: 0}
+  side: 8
+  halfPixelOffset: 1
+  runOnlyOnce: 0
+  relativeOffset: {x: 0, y: 0.1}
+  pixelOffset: {x: 0, y: 0}
 --- !u!1 &4873098883037991326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,12 +1490,12 @@ GameObject:
   - component: {fileID: 7359151542053061101}
   - component: {fileID: 7072020938656328664}
   m_Layer: 8
-  m_Name: Background (1)
+  m_Name: Content BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7978280914726345867
 Transform:
   m_ObjectHideFlags: 0
@@ -1558,7 +1579,7 @@ Transform:
   m_GameObject: {fileID: 5541867380381472393}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -378, y: 4, z: -0.000020980835}
+  m_LocalPosition: {x: -378, y: 373, z: -0.000020980835}
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1577,7 +1598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
-  mPivot: 3
+  mPivot: 0
   mDepth: 12
   mFont: {fileID: 3936954928667575084, guid: f5577163386ef44d69e6445630f7d42c, type: 3}
   mText: Contents 2
@@ -1609,10 +1630,10 @@ MonoBehaviour:
   uiCamera: {fileID: 0}
   widgetContainer: {fileID: 93938954581948997}
   panelContainer: {fileID: 0}
-  side: 1
+  side: 2
   halfPixelOffset: 1
   runOnlyOnce: 0
-  relativeOffset: {x: 0.05, y: 0}
+  relativeOffset: {x: 0.05, y: -0.05}
   pixelOffset: {x: 0, y: 0}
 --- !u!1 &5609402544531514028
 GameObject:
@@ -1641,7 +1662,7 @@ Transform:
   m_GameObject: {fileID: 5609402544531514028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -378, y: -364.99997, z: -0.000020980835}
+  m_LocalPosition: {x: -378, y: 373, z: -0.000020980835}
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1660,7 +1681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
-  mPivot: 6
+  mPivot: 0
   mDepth: 12
   mFont: {fileID: 3936954928667575084, guid: f5577163386ef44d69e6445630f7d42c, type: 3}
   mText: Contents 3
@@ -1692,10 +1713,10 @@ MonoBehaviour:
   uiCamera: {fileID: 0}
   widgetContainer: {fileID: 1337920911620393421}
   panelContainer: {fileID: 0}
-  side: 0
+  side: 2
   halfPixelOffset: 1
   runOnlyOnce: 0
-  relativeOffset: {x: 0.05, y: 0.05}
+  relativeOffset: {x: 0.05, y: -0.05}
   pixelOffset: {x: 0, y: 0}
 --- !u!1 &6002473950075124579
 GameObject:
@@ -1827,7 +1848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mDepth: 10
+  mDepth: 9
   mAtlas: {fileID: 4641051212277501498, guid: 2aa12d551ca754eb2bac29ddccc66654, type: 3}
   mSpriteName: ui7
   mFillCenter: 1
@@ -2012,17 +2033,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 540
+    e00: 1
     e01: 0
     e02: 0
     e03: 349
     e10: 0
-    e11: 540
+    e11: 1
     e12: 0
     e13: 80
     e20: 0
     e21: 0
-    e22: 540
+    e22: 1
     e23: 8
     e30: 0
     e31: 0
@@ -2079,7 +2100,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 250, y: 150, z: 1}
+  m_LocalScale: {x: 180, y: 150, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8427142143849820082}
@@ -2133,7 +2154,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 250, y: 150, z: 1}
+  m_LocalScale: {x: 180, y: 150, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082917193227915715}
@@ -2186,8 +2207,8 @@ Transform:
   m_GameObject: {fileID: 8157801699681544942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -125, y: 0, z: 0}
-  m_LocalScale: {x: 250, y: 150, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 180, y: 150, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9123278525987059164}
@@ -2205,7 +2226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
-  mPivot: 3
+  mPivot: 4
   mDepth: 15
   mAtlas: {fileID: 8005909330716535128, guid: 8d5dc7ec967e343b88004b0a4cb5b447, type: 3}
   mSpriteName: 32
@@ -2243,7 +2264,7 @@ Transform:
   m_GameObject: {fileID: 8455480110504319282}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -826, y: 0, z: -0.000020980835}
+  m_LocalPosition: {x: -864, y: 260, z: -0.000020980835}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2271,17 +2292,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 540
+    e00: 1
     e01: 0
     e02: 0
-    e03: 826
+    e03: 864
     e10: 0
-    e11: 540
+    e11: 1
     e12: 0
-    e13: 0
+    e13: -260
     e20: 0
     e21: 0
-    e22: 540
+    e22: 1
     e23: 8.000021
     e30: 0
     e31: 0
@@ -2307,10 +2328,10 @@ MonoBehaviour:
   uiCamera: {fileID: 0}
   widgetContainer: {fileID: 2785809231287028430}
   panelContainer: {fileID: 0}
-  side: 1
+  side: 2
   halfPixelOffset: 1
   runOnlyOnce: 0
-  relativeOffset: {x: 0.07, y: 0}
+  relativeOffset: {x: 0.05, y: -0.24}
   pixelOffset: {x: 0, y: 0}
 --- !u!114 &7907788016593027530
 MonoBehaviour:
@@ -2326,7 +2347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrangement: 1
   maxPerLine: 0
-  cellWidth: 150
+  cellWidth: 180
   cellHeight: 150
   repositionNow: 0
   sorted: 0
@@ -2351,6 +2372,8 @@ MonoBehaviour:
   - {fileID: 7456935893176576935}
   - {fileID: 1898358486634342978}
   - {fileID: 4649944213025619646}
+  selectedColor: {r: 0, g: 0, b: 1, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &8557771730327910391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,6 +2467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 545528213578390890}
   - component: {fileID: 7097392605398189581}
+  - component: {fileID: 3534420765829036203}
   m_Layer: 8
   m_Name: Label
   m_TagString: Untagged
@@ -2460,7 +2484,7 @@ Transform:
   m_GameObject: {fileID: 8881100570121585991}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2482,7 +2506,7 @@ MonoBehaviour:
   mPivot: 4
   mDepth: 16
   mFont: {fileID: 3936954928667575084, guid: f5577163386ef44d69e6445630f7d42c, type: 3}
-  mText: Button
+  mText: Tab 3
   mMaxLineWidth: 0
   mMaxLineHeight: 0
   mEncoding: 1
@@ -2496,6 +2520,26 @@ MonoBehaviour:
   mShrinkToFit: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &3534420765829036203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881100570121585991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8077b76001d36d489868d20d28bddb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCamera: {fileID: 0}
+  widgetContainer: {fileID: 9114209895939121500}
+  panelContainer: {fileID: 0}
+  side: 8
+  halfPixelOffset: 1
+  runOnlyOnce: 0
+  relativeOffset: {x: 0, y: 0.1}
+  pixelOffset: {x: 0, y: 0}
 --- !u!1 &8891276328581528389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2506,6 +2550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6941573828166298680}
   - component: {fileID: 4106044081051432927}
+  - component: {fileID: 5189321687172926349}
   m_Layer: 8
   m_Name: Label
   m_TagString: Untagged
@@ -2522,7 +2567,7 @@ Transform:
   m_GameObject: {fileID: 8891276328581528389}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2544,7 +2589,7 @@ MonoBehaviour:
   mPivot: 4
   mDepth: 16
   mFont: {fileID: 3936954928667575084, guid: f5577163386ef44d69e6445630f7d42c, type: 3}
-  mText: Button
+  mText: Tab 2
   mMaxLineWidth: 0
   mMaxLineHeight: 0
   mEncoding: 1
@@ -2558,6 +2603,26 @@ MonoBehaviour:
   mShrinkToFit: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!114 &5189321687172926349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8891276328581528389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8077b76001d36d489868d20d28bddb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCamera: {fileID: 0}
+  widgetContainer: {fileID: 2897646230661149479}
+  panelContainer: {fileID: 0}
+  side: 8
+  halfPixelOffset: 1
+  runOnlyOnce: 0
+  relativeOffset: {x: 0, y: 0.1}
+  pixelOffset: {x: 0, y: 0}
 --- !u!1 &9096159908223432411
 GameObject:
   m_ObjectHideFlags: 0
