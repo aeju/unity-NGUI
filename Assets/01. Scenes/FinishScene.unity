@@ -15013,6 +15013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragRadius: 0
   bgSprite: {fileID: 0}
+  bgDragColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &798391701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28112,6 +28113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragRadius: 0
   bgSprite: {fileID: 0}
+  bgDragColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1551202195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30809,6 +30811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragRadius: 0
   bgSprite: {fileID: 2108075499}
+  bgDragColor: {r: 0, g: 1, b: 0.9693701, a: 1}
 --- !u!65 &1682076445
 BoxCollider:
   m_ObjectHideFlags: 0

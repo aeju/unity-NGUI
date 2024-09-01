@@ -12,6 +12,7 @@ public class UIJoystickHandle : MonoBehaviour
     public float dragRadius; // handleSprite / targetSprite
     public UISprite bgSprite;
     private UISprite handleSprite;
+    [SerializeField] private Color bgDragColor;
 
     private int depth;
 
@@ -43,12 +44,18 @@ public class UIJoystickHandle : MonoBehaviour
             // 드래그 시작
             isDragging = true;
             offset = transform.position - GetMouseWorldPosition();
+            
+            // 조이스틱 배경 색상, 알파값 변경
+            bgSprite.alpha = 1f;
+            bgSprite.color = bgDragColor;
         }
         else
         {
             // 드래그 종료
             isDragging = false;
             transform.position = originalPosition;
+            bgSprite.alpha = 0.5f;
+            bgSprite.color = Color.white;
             
             Vector3 offset = transform.position - originalPosition;
             if (offset.magnitude > 0.05f) // 작은 오차 무시
