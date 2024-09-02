@@ -325,10 +325,10 @@ MonoBehaviour:
       height: 294
     inner:
       serializedVersion: 2
-      x: 522
-      y: 192
-      width: 294
-      height: 294
+      x: 532
+      y: 202
+      width: 274
+      height: 274
     rotated: 0
     paddingLeft: 0.010204081
     paddingRight: 0
