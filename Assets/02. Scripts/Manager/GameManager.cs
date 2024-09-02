@@ -4,8 +4,29 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    // [SerializeField] private PopupManager popupManager;
+    public GameObject sky1;
+    public GameObject sky2;
 
+    void Start()
+    {
+        SelectRandomSky();
+    }
+    
+    void SelectRandomSky()
+    {
+        if (sky1 == null || sky2 == null)
+        {
+            Debug.LogError("sky is null");
+            return;
+        }
+
+        // 50% 확률로 선택
+        bool selectSky1 = Random.value < 0.5f;
+
+        sky1.SetActive(selectSky1);
+        sky2.SetActive(!selectSky1);
+    }
+    
     private void Update()
     {
         // ESC 키 입력 처리
