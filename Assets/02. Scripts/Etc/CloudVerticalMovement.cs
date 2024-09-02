@@ -17,22 +17,21 @@ public class CloudVerticalMovement : MonoBehaviour
         
         if (affectChildren)
         {
-            // 모든 자식 오브젝트의 Transform을 가져옵니다.
+            // 모든 자식 오브젝트의 Transform을 가져오기
             childTransforms = GetComponentsInChildren<Transform>();
         }
     }
 
     void Update()
     {
-        // 시간에 따른 사인 파동을 계산합니다.
+        // 시간에 따른 사인 파동을 계산
         float yOffset = Mathf.Sin(Time.time * frequency) * amplitude;
         Vector3 newPos = startPos + new Vector3(0f, yOffset, 0f);
 
         // 부모 오브젝트의 위치를 업데이트합니다.
         transform.position = newPos;
 
-        // 자식 오브젝트들도 움직이게 하려면 아래 코드를 주석 해제하세요.
-        
+        // 자식 오브젝트들도 움직이게 하려면
         if (affectChildren && childTransforms != null)
         {
             foreach (Transform child in childTransforms)
