@@ -823,7 +823,7 @@ Transform:
   m_GameObject: {fileID: 86366559}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.959974, y: 20, z: 0}
+  m_LocalPosition: {x: 58, y: 20, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5061,12 +5061,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2bf3b004622f407a85eccc0dcbff780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 1996549835}
   hpSlider: {fileID: 323340294}
   hpLabel: {fileID: 182182517}
   mpSlider: {fileID: 2100626157}
   mpLabel: {fileID: 1590769631}
   expSlider: {fileID: 1661980743}
-  expLable: {fileID: 1853718931}
+  expLabel: {fileID: 1853718931}
+  levelLabel: {fileID: 1847701235}
   combatPower: {fileID: 1077447416}
 --- !u!1 &333212162
 GameObject:
@@ -28176,11 +28178,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 213020035239118863, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
       propertyPath: exp
-      value: 30.23
+      value: 5489
       objectReference: {fileID: 0}
     - target: {fileID: 213020035239118863, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
       propertyPath: level
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 213020035239118863, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
       propertyPath: maxMana
@@ -28308,6 +28310,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 886e94c8c04c045b29b16cf112a16dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1996549835 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 213020035239118863, guid: 1f4530bc040234939b43f4f0b5c26a20, type: 3}
+  m_PrefabInstance: {fileID: 1996549833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e236fbddb6d58477bb8390a6d0b09a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2002710030

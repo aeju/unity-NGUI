@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class UIStatsDisplay : MonoBehaviour
 {
+    [SerializeField] private PlayerStats playerStats; 
+    
     public UISlider hpSlider;
     public UILabel hpLabel;
     
@@ -11,9 +14,42 @@ public class UIStatsDisplay : MonoBehaviour
     public UILabel mpLabel;
 
     public UISlider expSlider;
-    public UILabel expLable;
+    public UILabel expLabel;
+    public UILabel levelLabel;
 
     public UILabel combatPower; // 공격력
+
+    private void Start()
+    {
+        if (playerStats != null)
+        {
+            playerStats.OnHealthChanged += UpdateHealthUI;
+            playerStats.OnManaChanged += UpdateManaUI;
+            playerStats.OnExpChanged += UpdateExpUI;
+        }
+        else
+        {
+            Debug.LogError("PlayerStats is null");
+        }
+    }
+
+    public void UpdateExpUI(float totalExp, int level)
+    {
+        if (expSlider != null)
+        {
+            expSlider.sliderValue = Calculator.CalculateExpPercentage(totalExp);
+        }
+        
+        if (expLabel != null)
+        {
+            expLabel.text = $"{(expSlider.sliderValue * 100):F1}%";
+        }
+
+        if (levelLabel != null)
+        {
+            levelLabel.text = level.ToString();
+        }
+    }
     
     public void UpdateHealthUI(int currentHealth, int maxHealth)
     {
