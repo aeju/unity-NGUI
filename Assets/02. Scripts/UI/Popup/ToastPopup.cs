@@ -13,23 +13,25 @@ public class ToastPopup : PopupBase
     public override void Show(string title)
     {
         SetMessage(title);
-        
+        StartShowAnimation();
+        StartCoroutine(HideAfterDuration());
+    }
+    
+    private void StartShowAnimation()
+    {
         Vector3 startPos = transform.localPosition - Vector3.up * moveDistance;
         Vector3 endPos = transform.localPosition;
 
         tweenPosition = TweenPosition.Begin(gameObject, animationDuration, endPos);
         tweenPosition.from = startPos;
         tweenPosition.to = endPos;
-        tweenPosition.method = UITweener.Method.EaseOut; // 부드러운 감속 효과를 위해 EaseOut 사용
+        tweenPosition.method = UITweener.Method.EaseOut;
         tweenPosition.style = UITweener.Style.Once;
-        
-        StartCoroutine(HideAfterDuration());
     }
     
     public override void Hide()
     {
-        // 스택에 추가 x 
-        // PopupManager.Instance.CloseTopPopup();
+        // PopupManager.Instance.CloseTopPopup(); 스택에 추가 x 
         Destroy(gameObject);
     }
     

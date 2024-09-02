@@ -18,13 +18,7 @@ public static class Definitions
         YesNo,
         FullSize,
     }
-
-    public enum QuestType
-    {
-        Normal,
-        Party
-    }
-
+    
     // 배터리 슬라이더 색상 
     public enum BatterySliderColorStatus
     {
@@ -32,10 +26,10 @@ public static class Definitions
         Medium, // ~40 : yellow
         High // ~100 : green 
     }
-    
-    public enum TooltipType
+
+    public enum ToastPopupType
     {
-        First,
-        Second
+        gameStart,
+        exitGame,
     }
 }
