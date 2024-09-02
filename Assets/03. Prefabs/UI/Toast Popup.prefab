@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 143, z: 0}
-  m_LocalScale: {x: 800, y: 50, z: 1}
+  m_LocalScale: {x: 750, y: 60, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8000057461082515933}
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0.59607846}
+  mColor: {r: 0, g: 0, b: 0, a: 0.59607846}
   mPivot: 4
   mDepth: 0
   mAtlas: {fileID: 8005909330716535128, guid: 8d5dc7ec967e343b88004b0a4cb5b447, type: 3}
@@ -144,6 +144,8 @@ MonoBehaviour:
   TitleLabel: {fileID: 930624961248856701}
   canCloseWithEsc: 0
   duration: 1
+  animationDuration: 0.3
+  moveDistance: 30
 --- !u!1 &5937849888967815208
 GameObject:
   m_ObjectHideFlags: 0

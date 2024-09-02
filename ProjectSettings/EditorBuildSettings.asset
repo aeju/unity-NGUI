@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/01. Scenes/Before/FinishScene.unity
     guid: 9e0fad22da01e488bbeef7005e36eda9
+  - enabled: 1
+    path: Assets/01. Scenes/CameraRestrictScene.unity
+    guid: 37794fcd834034d2fb254693e4330d13
   m_configObjects: {}

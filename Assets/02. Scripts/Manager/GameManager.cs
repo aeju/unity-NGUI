@@ -10,6 +10,7 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         SelectRandomSky();
+        ShowWelcomeMessage();
     }
     
     void SelectRandomSky()
@@ -25,6 +26,11 @@ public class GameManager : Singleton<GameManager>
 
         sky1.SetActive(selectSky1);
         sky2.SetActive(!selectSky1);
+    }
+    
+    void ShowWelcomeMessage()
+    {
+        PopupManager.Instance.ShowToast("게임에 오신 것을 환영합니다!", 3f);
     }
     
     private void Update()
@@ -51,8 +57,15 @@ public class GameManager : Singleton<GameManager>
     private void ShowExitConfirmationPopup()
     {
         PopupManager.Instance.ShowYesNoPopup("게임 종료", "정말로 게임을 종료하시겠습니까?", 
-            () => Application.Quit(), 
+            //() => Application.Quit(), 
+            () => StartCoroutine(ExitGameWithToast()), 
             () => PopupManager.Instance.CloseTopPopup());
     }
 
+    private IEnumerator ExitGameWithToast()
+    {
+        PopupManager.Instance.ShowToast("게임을 종료합니다.", 2f);
+        yield return new WaitForSeconds(2f);
+        Application.Quit();
+    }
 }

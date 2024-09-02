@@ -39,15 +39,21 @@ public class PopupManager : Singleton<PopupManager>
         popupStack.Push(yesNoObject);
     }
     
-    /*
+    // 자동으로 사라짐 -> 스택에 넣을 필요 x 
     public void ShowToast(string message, float duration)
     {
         GameObject toastObject = NGUITools.AddChild(popupPanel, toastPrefab);
         ToastPopup toast = toastObject.GetComponent<ToastPopup>();
-        //toast.Show(title);
-        //StartCoroutine(HideAfterDuration(toast, duration));
+        if (toast != null)
+        {
+            toast.duration = duration;
+            toast.Show(message);
+        }
+        else
+        {
+            Debug.LogError("ToastPopup component not found on instantiated prefab");
+        }
     }
-    */
 
     public void CloseTopPopup()
     {
