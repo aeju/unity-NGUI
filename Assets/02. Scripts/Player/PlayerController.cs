@@ -73,8 +73,16 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        // 수평 이동 입력 처리
-        moveHorizontal = GetHorizontalInput();
+        if (!isJumping)
+        {
+            // 수평 이동 입력 처리
+            moveHorizontal = GetHorizontalInput();
+        }
+        else
+        {
+            moveHorizontal = 0;
+        }
+        
         
 #if UNITY_EDITOR // 에디터 : 왼쪽 alt - 점프 / z - 기본 공격
         // 점프 입력 감지
