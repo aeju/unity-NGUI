@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,31 +16,25 @@ public class UIJoystickHandle : MonoBehaviour
 
     private int depth;
 
-    void Awake()
+    void Start()
     {
-        // 조이스틱 위치 초기화
-        originalPosition = transform.position; 
+        originalPosition = transform.position;
         
         handleSprite = GetComponent<UISprite>();
-        // dragRadius 초기화
+        Debug.Log("handle's radius" + handleSprite.transform.localScale.x);
+        
         if (bgSprite != null && handleSprite != null)
         {
             // dragRadius를 handleSprite와 targetSprite의 localScale.x 비율로 설정
             dragRadius = handleSprite.transform.localScale.x / bgSprite.transform.localScale.x / 2;
+            Debug.Log("Handle's scale: " + handleSprite.transform.localScale.x);
+            Debug.Log("Target's scale: " + bgSprite.transform.localScale.x);
+            Debug.Log("Drag radius set to: " + dragRadius);
         }
         else
         {
             Debug.LogError("Target UISprite or Handle UISprite is not assigned!");
         }
-    }
-
-    void Start()
-    {
-        // Awake에서 초기화한 값들을 로그로 출력
-        Debug.Log("handle's radius: " + handleSprite.transform.localScale.x);
-        Debug.Log("Handle's scale: " + handleSprite.transform.localScale.x);
-        Debug.Log("Target's scale: " + bgSprite.transform.localScale.x);
-        Debug.Log("Drag radius set to: " + dragRadius);
     }
 
     void OnPress(bool isPressed)
