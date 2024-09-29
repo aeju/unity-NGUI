@@ -6,10 +6,11 @@ public static class Definitions
 {
     public enum ButtonType
     {
+        Default,
+        ButtonSettings,
         Settings,
         Inventory,
-        YesNo,
-        Quest
+        Notify,
     }
     
     public enum PopupType
